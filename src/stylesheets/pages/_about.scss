@@ -1,0 +1,136 @@
+// About us page styles
+
+// Our mission and history
+.company-mission {
+	margin: 23px 0 0 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.5rem;
+	color: $text-secondary-color;
+}
+
+.company-history {
+	margin: 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-primary-color;
+	line-height: (24/18);
+
+	&:nth-child(1) {
+		margin: 23px 0 25px 0;
+	}
+
+}
+
+// Our advanteges bg
+.white-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $white;
+	opacity: 0.8;
+}
+
+.advanteges-bg {
+	background: url('../img/BG.jpg') no-repeat;
+	background-size: cover;
+}
+
+.advanteges__title {
+	display: block;
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 0 90px 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.25rem;
+	color: $text-primary-color;
+	line-height: (24/18);
+	text-align: center;
+}
+
+// Counts in advanteges
+.advantege-count {
+	margin: 20px 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 2.75rem;
+	color: $accent-color;
+	text-align: center;
+}
+
+.advantege-descr {
+	margin: 0;
+	padding: 18px 0 0 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.25rem;
+	color: $text-primary-color;
+	line-height: (27/20);
+	text-align: center;
+}
+
+// Staff styles
+.staff-img {
+	display: block;
+	margin: auto;
+	width: 166px;
+	height: 166px;
+	border-radius: 50%;
+}
+
+.staff-name {
+	margin: 11px 0 0 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 1.125rem;
+	color: $text-color-dark;
+	line-height: (34/18);
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.staff-position {
+	margin: 4px 0 0 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-color-grey;
+	text-align: center;
+}
+
+// Links to other pages
+.faq-title, .services-title {
+	margin: 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 1.25rem;
+	color: $text-color-grey;
+	letter-spacing: 1px;
+}
+
+.faq-descr, .services-descr {
+	margin: 20px 0 30px 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-primary-color;
+	line-height: (24/18);
+}
+
+.faq-link, .services-link {
+	position: relative;
+	display: inline-block;
+	margin: 0 0 90px 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1rem;
+	color: $accent-color;
+	letter-spacing: 1px;
+	transition: letter-spacing 0.3s;
+
+	&:hover {
+		letter-spacing: 2px;
+	}
+
+	.arrow {
+	    position: absolute;
+	    top: 4px;
+	    right: -14px;
+	    fill: $accent-color;
+	}
+
+}

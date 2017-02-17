@@ -1,0 +1,4 @@
+/node-modules/*
+/archive/*
+/build/*
+*.zip

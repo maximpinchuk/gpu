@@ -1,0 +1,26 @@
+{
+  "name": "gpu",
+  "version": "1.0.0",
+  "description": "GPU website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spaced DA",
+  "license": "ISC",
+  "devDependencies": {
+    "animate.css": "^3.5.2",
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "remodal": "^1.1.1",
+    "rimraf": "^2.5.4",
+    "swiper": "^3.4.1"
+  }
+}
