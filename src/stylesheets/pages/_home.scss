@@ -27,18 +27,20 @@
 
 .slide__link {
 	position: relative;
-	padding: 0 8px 0 0;
+	padding: 13px 25px;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	color: $grey;
-	letter-spacing: 2px;
-	line-height: (33/18);
+	border: 1px solid $grey;
+	border-radius: 4px;
+	letter-spacing: 1px;
 	opacity: 0;
 	z-index: 2;
-	transition: letter-spacing 0.3s;
+	transition: all 0.3s;
 	
 	&:hover {
-		letter-spacing: 2.5px;
+		color: $white;
+		border: 1px solid $white;
 	}
 
 	@include respond-to(extrasmall) {
