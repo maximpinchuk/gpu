@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     browserSync = require("browser-sync"),
     rimraf = require('rimraf'),
-    gutil = require('gulp-util'),
     reload = browserSync.reload;
 
 var path = {
