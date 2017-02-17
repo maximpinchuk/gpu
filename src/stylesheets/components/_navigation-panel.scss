@@ -1,4 +1,5 @@
 // Styles for navigatio panel (including logo)
+
 .nav-panel {
 
 	&.adaptive {
@@ -123,6 +124,7 @@
 
 			&__link {
 				position: relative;
+				padding: 0 0 5px 0;
 				font-family: 'ElliotRegular', sans-serif;
 				font-size: 0.875rem;
 				color: $menu-text-color;
@@ -133,7 +135,7 @@
 				&:after {
 					content: '';
 					position: absolute;
-					bottom: -10px;
+					bottom: -5px;
 					left: 0;
 					width: 100%;
 					height: 1px;
@@ -147,10 +149,30 @@
 					color: $white;
 
 					&:after {
-						transform: translateY(0);
+						transform: translateY(-5px);
 						opacity: 1;
 					}
 
+				}
+
+				&.opened {
+					color: $white;
+
+					&:after {
+						transform: translateY(-5px);
+						opacity: 1;
+					}
+
+					.icon {
+						fill: $white;
+						transform: rotate(180deg);
+					}
+
+				}
+
+				.icon {
+					fill: $white;
+					transition: all 0.3s;
 				}
 
 			}
@@ -158,4 +180,15 @@
 		}
 
 	}
+}
+
+.services-menu {
+	display: none;
+	position: fixed;
+	top: 94px;
+	left: 10%;
+	width: 80%;
+	height: 300px;
+	background: #fff;
+	z-index: 5;
 }

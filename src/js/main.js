@@ -164,6 +164,21 @@ $(document).ready(function() {
 
 
 
+    // Service menu fadeIn and fadeOut
+    $('.nav-panel__navigation__item__link').mouseenter(function() {
+        if( $(this).hasClass('services') ) {
+            $('.services-menu').fadeIn(300);
+            $('.nav-panel__navigation__item__link.services').addClass('opened');
+        } else {
+            $('.services-menu').fadeOut(300);
+            $('.nav-panel__navigation__item__link.services').removeClass('opened');
+        } 
+    });
+    $('.services-menu').mouseleave(function() {
+        $('.services-menu').fadeOut(300);
+        $('.nav-panel__navigation__item__link.services').removeClass('opened');
+    });
+
     // Smooth scroll
     $('a[href^="#"]').click(function(){
         var el = $(this).attr('href');
