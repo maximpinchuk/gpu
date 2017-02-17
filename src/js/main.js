@@ -1,17 +1,6 @@
 //= vendors.js
 
 $(document).ready(function() {
-
-    // Btn center alignement Function
-    function linkCenter() {
-        $('.btn_center').each(function() {
-            var linkWidth = $(this).width();
-            $(this).css({
-                'margin-left': -(linkWidth/2)
-            });
-        });
-    };
-    linkCenter();
     
 
 

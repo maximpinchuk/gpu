@@ -26,8 +26,7 @@
 }
 
 .slide__link {
-	position: absolute;
-	left: 50%;
+	position: relative;
 	padding: 0 8px 0 0;
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 1.125rem;
@@ -181,34 +180,24 @@
 	text-align: center;
 }
 
-.link__block {
+.aboutus__link {
 	position: relative;
-	width: 100%;
+	padding: 0 18px 0 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1rem;
+	color: $accent-color;
+	letter-spacing: 2px;
+	transition: 0.5s;
 
-	.aboutus__link {
-		padding: 0 18px 0 0;
-		font-family: 'ElliotRegular', sans-serif;
-		font-size: 1rem;
-		color: $accent-color;
-		letter-spacing: 2px;
-		position: absolute;
-		left: 50%;
-		transition: 0.5s;
+	&:hover {
+		letter-spacing: 2.5px;
+	}
 
-		&:hover {
-			letter-spacing: 2.5px;
-		}
-
-		.arrow {
-			position: absolute;
-			right: -3px;
-			top: 50%;
-			margin-top: -4.5px;
-			width: 5px;
-			height: 9px;
-			fill: $accent-color;
-		}
-
+	.arrow {
+		margin-top: -4.5px;
+		width: 5px;
+		height: 9px;
+		fill: $accent-color;
 	}
 
 }
@@ -455,13 +444,12 @@
 	}
 
 	.service__link {
+		position: relative;
 		padding: 0 10px 0 0;
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 0.875rem;
 		color: $white;
 		letter-spacing: 2px;
-		position: absolute;
-		left: 50%;
 		transition: 0.5s;
 
 		&:hover {
@@ -484,13 +472,13 @@
 
 // Service link to service page
 .services-all__link {
+	position: relative;
 	padding: 0 10px 0 0;
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 0.9375rem;
 	color: $text-primary-color;
 	letter-spacing: 2px;
-	position: absolute;
-	left: 50%;
+	text-align: center;
 	transition: 0.5s;
 	z-index: 2;
 
@@ -509,9 +497,6 @@
 	}
 
 	.arrow {
-		position: absolute;
-		right: -3px;
-		top: 50%;
 		margin-top: -4.5px;
 		width: 5px;
 		height: 9px;

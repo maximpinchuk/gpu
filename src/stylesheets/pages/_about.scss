@@ -6,6 +6,15 @@
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 1.5rem;
 	color: $text-secondary-color;
+	text-align: left;
+
+	@include respond-to(extrasmall) {
+		text-align: center;
+	}
+
+	@include respond-to(small) {
+		text-align: center;
+	}
 }
 
 .company-history {
@@ -14,6 +23,15 @@
 	font-size: 1.125rem;
 	color: $text-primary-color;
 	line-height: (24/18);
+	text-align: left;
+
+	@include respond-to(extrasmall) {
+		text-align: center;
+	}
+
+	@include respond-to(small) {
+		text-align: center;
+	}
 
 	&:nth-child(1) {
 		margin: 23px 0 25px 0;
