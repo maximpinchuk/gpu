@@ -11,6 +11,7 @@
   "devDependencies": {
     "animate.css": "^3.5.2",
     "browser-sync": "^2.18.8",
+    "flexbox-grid-sass": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^3.0.2",

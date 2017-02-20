@@ -187,4 +187,7 @@ $(document).ready(function() {
         return false;
     });
 
+    // Phone mask
+    $("#tel").mask("+375 (99) 999 99 99");
+
 });
