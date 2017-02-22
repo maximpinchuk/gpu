@@ -30,8 +30,8 @@
 	padding: 13px 25px;
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 1rem;
-	color: $grey;
-	border: 1px solid $grey;
+	color: $white;
+	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-radius: 4px;
 	letter-spacing: 1px;
 	opacity: 0;
@@ -133,22 +133,39 @@
 	font-size: 0.875rem;
 	color: $white;
 	letter-spacing: 2px;
-	opacity: 0.6;
 	z-index: 2;
 	transition: 0.5s;
 
 	&:after {
 		content: '';
+		float: right;
 		position: absolute;
 		bottom: -5px;
 		left: 0;
 		width: 100%;
 		height: 1px;
-		background: $white;
+		background: rgba(255, 255, 255, 0.3);
+		z-index: 1;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: $accent-color;
+		transition: width 0.3s;
+		z-index: 2;
 	}
 
 	&:hover {
-		opacity: 1;
+
+		&:before {
+			width: 100%;
+		}
+
 	}
 
 	@include respond-to(extrasmall) {

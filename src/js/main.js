@@ -169,15 +169,47 @@ $(document).ready(function() {
         if( $(this).hasClass('services') ) {
             $('.services-menu').fadeIn(300);
             $('.nav-panel__navigation__item__link.services').addClass('opened');
+            $('.services-menu__bg').fadeIn(100);
+
+            $('.header-consultation').addClass('blur');
         } else {
             $('.services-menu').fadeOut(300);
             $('.nav-panel__navigation__item__link.services').removeClass('opened');
+            $('.services-menu__bg').fadeOut(100);
+
+            $('.header-consultation').removeClass('blur');
         } 
     });
     $('.services-menu').mouseleave(function() {
         $('.services-menu').fadeOut(300);
         $('.nav-panel__navigation__item__link.services').removeClass('opened');
+        $('.services-menu__bg').fadeOut(100);
+
+        $('.header-consultation').removeClass('blur');
     });
+
+
+
+    // Navigation hover effect
+    $('.nav-panel__navigation__item').mouseenter(function() {
+        $('.nav-panel__navigation').addClass('hover');
+    });
+    $('.nav-panel__navigation__item').mouseleave(function() {
+        $('.nav-panel__navigation').removeClass('hover');
+    });
+    // $('.services-menu').mouseenter(function() {
+    //     $('.nav-panel__navigation').addClass('hover');
+    // });
+    // (function() {
+    //     if ($('.nav-panel__navigation__item__link.services').hasClass('opened')) {
+    //         $('.nav-panel__navigation__item').css({
+    //             opacity: '0.4'
+    //         });
+    //     }
+    // }());
+    
+
+
 
     // Smooth scroll
     $('a[href^="#"]').click(function(){
@@ -187,7 +219,14 @@ $(document).ready(function() {
         return false;
     });
 
+
+
     // Phone mask
     $("#tel").mask("+375 (99) 999 99 99");
+
+
+
+    //= controllers/form.handlers.js
+    //= controllers/validation.js
 
 });

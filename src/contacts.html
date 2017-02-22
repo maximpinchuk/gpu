@@ -47,7 +47,7 @@
 				<div class="col col--xs-12 col--sm-12 col--md-6 col--lg-3 col--xl-3">
 					<p class="contacts__subtitle">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</p>
 					<p class="contacts__text">Ничего не понятно и надо бы объяснить, что тут вообще происходит?</p>
-					<a href="#" class="consultation-block__link">ЗАДАТЬ ВОПРОС</a>
+					<a href="#" class="consultation-block__link" data-remodal-target="consultation">ЗАДАТЬ ВОПРОС</a>
 				</div>
 			</div>
 		</div>
@@ -73,25 +73,25 @@
 					<h3 class="block__subtitle left">НАПИШИТЕ НАМ, И МЫ ОТВЕТИМ</h3>
 				</div>
 			</div>
-			<form class="form">
+			<form class="form" id="contact_form">
 				<div class="row">
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
 						<label class="form__form-label" for='name'>ВВЕДИТЕ ВАШЕ ИМЯ</label>
-						<input class="form__form-input" id='name' name='name' type='text' placeholder="Дмитрий Прокопенко" required>
+						<input class="form__form-input" id='name' name='name' type='text' placeholder="Дмитрий Прокопенко">
 					</div>
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
 						<label class="form__form-label" for='tel'>ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
-						<input class="form__form-input" id='tel' name='tel' type='text' placeholder="+ 375 (29) 000 00 00" required>
+						<input class="form__form-input" id='tel' name='tel' type='text' placeholder="+ 375 (29) 000 00 00">
 					</div>
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
 						<label class="form__form-label" for='email'>ВВЕДИТЕ ВАШУ ПОЧТУ</label>
-						<input class="form__form-input" id='email' name='email' type='email' placeholder="contact@mail.com" required>
+						<input class="form__form-input" id='email' name='email' type='email' placeholder="contact@mail.com">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
 						<label class="form__form-label" for='message'>ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
-						<textarea class="form__form-textarea" id="message" placeholder="Введите ваше сообщение"></textarea>
+						<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
 					</div>
 				</div>
 				<div class="row">

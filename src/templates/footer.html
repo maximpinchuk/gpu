@@ -43,7 +43,7 @@
 					<div class="consultation-block">
 						<p class="consultation-block__title">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</p>
 						<p class="consultation-block__subtitle">Ничего не понятно и надо бы объяснить, что тут вообще происходит?</p>
-						<a href="#" class="consultation-block__link">ЗАДАТЬ ВОПРОС</a>
+						<a class="consultation-block__link" data-remodal-target="consultation">ЗАДАТЬ ВОПРОС</a>
 					</div>
 				</div>
 			</div>
@@ -52,3 +52,20 @@
 </footer>
 
 <!-- /Footer -->
+
+
+
+<!-- Consultation popup -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="consultation">
+		<button data-remodal-action="close" class="remodal-close"></button>
+		<h1>Remodal</h1>
+		<p>Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.</p>
+		<br>
+		<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+		<button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+	</div>
+</div>
+
+<!-- /Consultation popup -->

@@ -42,3 +42,9 @@
 // vendors-extensions
 @import "vendors-extensions/swiper";
 @import "vendors-extensions/animate";
+
+
+// Some extra classes
+.blur {
+	filter: blur(1px);
+}

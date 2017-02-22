@@ -21,7 +21,7 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
     "remodal": "^1.1.1",
-    "rimraf": "^2.5.4",
+    "rimraf": "^2.6.0",
     "swiper": "^3.4.1"
   }
 }

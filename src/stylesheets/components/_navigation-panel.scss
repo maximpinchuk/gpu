@@ -96,7 +96,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	z-index: 2;
+	z-index: 5;
 
 	@include respond-to(extrasmall) {
 		display: none;
@@ -114,53 +114,46 @@
 	}
 
 	&__navigation {
-		margin: 50px 70px 0 0;
+		margin: 50px 56px 0 0;
 		padding: 0;
 		list-style: none;
 
+		&.hover {
+			.nav-panel__navigation__item {
+
+				&:not(:hover) {
+					opacity: 0.4;
+				}
+
+			}
+		}
+
 		&__item {
 			float: left;
-			margin: 15px 0 0 23px;
+			margin: 15px 0 0 0;
+			transition: opacity 0.3s;
 
 			&__link {
 				position: relative;
-				padding: 0 0 5px 0;
+				padding: 0 12px 10px 12px;
 				font-family: 'ElliotRegular', sans-serif;
 				font-size: 0.875rem;
-				color: $menu-text-color;
+				color: $white;
 				letter-spacing: 2px;
 				text-transform: uppercase;
 				transition: 0.3s ease;
-
-				&:after {
-					content: '';
-					position: absolute;
-					bottom: -5px;
-					left: 0;
-					width: 100%;
-					height: 1px;
-					opacity: 0;
-					background: $white;
-					transform: translateY(10px);
-					transition: 0.5s ease;
-				}
-
-				&:hover {
-					color: $white;
-
-					&:after {
-						transform: translateY(-5px);
-						opacity: 1;
-					}
-
-				}
 
 				&.opened {
 					color: $white;
 
 					&:after {
-						transform: translateY(-5px);
-						opacity: 1;
+						content: '';
+						position: absolute;
+						bottom: -16px;
+						left: 5px;
+						width: 100%;
+						height: 2px;
+						background: $accent-color;
 					}
 
 					.icon {
@@ -182,13 +175,125 @@
 	}
 }
 
+
+
+// Services toggle manu
+.services-menu__bg {
+	display: none;
+	position: fixed;
+	top: 0;
+	height: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	z-index: 4;
+}
+
 .services-menu {
 	display: none;
-	position: absolute;
-	top: 94px;
-	left: 10%;
-	width: 80%;
-	height: 300px;
+	position: fixed;
+	padding: 0 15px 96px 15px;
+	top: 107px;
 	background: #fff;
-	z-index: 5;
+	z-index: 6;
+}
+
+.services-menu__title {
+	margin: 60px 0 21px 0;
+	padding: 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 1.125rem;
+	color: $text-third-color;
+	letter-spacing: 1px;
+}
+
+.services-menu__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+
+		&__link {
+			font-family: 'ElliotRegular', sans-serif;
+			font-size: 1.125rem;
+			color: $text-primary-color;
+			line-height: (26/18);
+			transition: color 0.3s;
+
+			&:hover {
+				color: $accent-color;
+			}
+
+		}
+
+	}
+
+}
+
+.services-menu__text {
+	margin: 0;
+	padding: 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-primary-color;
+	line-height: (26/18);
+}
+
+.services-menu__link {
+	display: inline-block;
+	position: relative;
+	margin: 21px 0 0 0;
+	padding: 0 20px 0 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 0.8125rem;
+	color: $text-third-color;
+	letter-spacing: 1px;
+
+	&:hover {
+
+		.services-menu__link__icon {
+			right: -8px;
+
+			.st1 {
+				transform: scale(1);
+			}
+
+		}
+
+
+	}
+
+	&.red {
+		color: $accent-color;
+	}
+
+	&__icon {
+	    position: absolute;
+	    top: 3px;
+	    right: 4px;
+		width: 22px;
+		fill: $text-third-color;
+		transition: right 0.3s;
+
+		&.red {
+			fill: $accent-color;
+		}
+
+		.st1 {
+			width: 21px;
+			height: 1px;
+			transform-origin: right;
+			transform: scale(0);
+			transition: all 0.3s;
+		}
+
+		.st2 {
+			width: 8px;
+			height: 9px;
+		}
+
+	}
+
 }

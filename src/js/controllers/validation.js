@@ -28,7 +28,7 @@ var simpleValidation = function() {
 			var validateThisType = $(this).attr('type');
 
 			// Checks if input type is email
-			if(validateThisType === "email"){
+			if(validateThisType === "email") {
 
 				// Email regex
 				var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -57,26 +57,26 @@ var simpleValidation = function() {
 		});
 
 
-		validateForm.submit(function(event) {
-			// Prevents Default
-			event.preventDefault();
+		// validateForm.submit(function(event) {
+		// 	// Prevents Default
+		// 	event.preventDefault();
 
-			// Logging form errors
-			var falseCtn = 0;
-			for(var i = 1; i <= validatingLength; i++) {
-				if(validate['input'+i] == false){
-					falseCtn++;
-				}
-			}
+		// 	// Logging form errors
+		// 	var falseCtn = 0;
+		// 	for(var i = 1; i <= validatingLength; i++) {
+		// 		if(validate['input'+i] == false) {
+		// 			falseCtn++;
+		// 		}
+		// 	}
 
-			// Checking if any falses exist
-			if(falseCtn > 0) {
-				$(this).unbind('submit').submit();
-				$(this).click();
-			} else {
-			
-			}
-		});
+		// 	// Checking if any falses exist
+		// 	if(falseCtn > 0) {
+		// 		$(this).unbind('submit').submit();
+		// 		$(this).click();
+		// 	} else {
+				
+		// 	}
+		// });
 
 	});
 
