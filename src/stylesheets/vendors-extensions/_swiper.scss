@@ -263,7 +263,7 @@
                 left: 0;
                 height: 2px;
                 background: $accent-color;
-                transition: left 0.2s ease-out;
+                transition: left 0.5s ease-out;
 
                 @include respond-to(large) {
 

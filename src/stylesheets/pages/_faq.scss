@@ -1,0 +1,59 @@
+// faq page styles
+
+
+
+.faq-list {
+	margin: 0 0 35px 0;
+	padding: 0 0 0 15px;
+	list-style: none;
+	text-align: left;
+
+	&__item {
+		padding: 6px 15px 6px 0;
+		font-family: 'ElliotBold', sans-serif;
+		font-family: 1.5rem;
+		color: $accent-color;
+
+		&__link {
+			position: relative;
+			padding: 0 20px 0 0;
+			font-family: 'ElliotRegular', sans-serif;
+			font-family: 1.3125rem;
+			color: $text-primary-color;
+
+			.arrow {
+				margin: 0 0 0 10px;
+				width: 5px;
+				height: 9px;
+				fill: $accent-color;	
+			}
+
+		}
+	}
+}
+
+.faq-answer {
+	margin: 35px 0;
+	padding: 0 15px;
+	text-align: left;
+
+	&__title {
+		font-family: 'ElliotBold', sans-serif;
+		font-family: 1.5rem;
+		color: $text-third-color;
+
+		span {
+			font-family: 'ElliotBold', sans-serif;
+			font-family: 1.3125rem;
+			color: $text-third-color;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 0.9125rem;
+		color: $text-primary-color;
+		line-height: (24/17);
+	}
+}

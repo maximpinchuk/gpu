@@ -27,7 +27,7 @@
 
 .slide__link {
 	position: relative;
-	padding: 13px 25px;
+	padding: 16px 25px;
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 1rem;
 	color: $white;
@@ -450,6 +450,7 @@
 		font-size: 1.75rem;
 		color: $white;
 		line-height: (42/28);
+		font-weight: normal;
 		letter-spacing: 4px;
 		padding: 0 80px 30px 80px;
 		margin: 0;

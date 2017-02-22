@@ -31,6 +31,7 @@
 @import "pages/home";
 @import "pages/about";
 @import "pages/services";
+@import "pages/faq";
 @import "pages/contacts";
 
 // vendors
@@ -47,4 +48,7 @@
 // Some extra classes
 .blur {
 	filter: blur(1px);
+}
+.transparent {
+	opacity: 0.4;
 }
