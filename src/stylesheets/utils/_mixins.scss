@@ -1,23 +1,63 @@
 // Responsive
 @mixin respond-to($media) {
-    @if $media == extrasmall {
-        @media only screen and (max-width: $break-small) {
-            @content;
-        }
-    }
-    @else if $media == small {
-        @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
-            @content;
-        }
-    }
-    @else if $media == medium {
-        @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large - 1) {
-            @content;
-        }
-    }
-    @else if $media == large {
-        @media only screen and (min-width: $break-large) {
-            @content;
-        }
-    }
+	@if $media == extrasmall {
+		@media only screen and (max-width: $break-small) {
+			@content;
+		}
+	}
+	@else if $media == small {
+		@media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+			@content;
+		}
+	}
+	@else if $media == medium {
+		@media only screen and (min-width: $break-medium + 1) and (max-width: $break-large - 1) {
+			@content;
+		}
+	}
+	@else if $media == large {
+		@media only screen and (min-width: $break-large) {
+			@content;
+		}
+	}
+}
+
+
+
+// Button
+@mixin btn($text-color, $border-color) {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding: 16px 25px;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 0.9375rem;
+	color: $text-color;
+	letter-spacing: 1px;
+	border: 1px solid $border-color;
+	border-radius: 4px;
+	transition: color 0.3s, border 0.3s 0.1s;
+
+	span {
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: $accent-color;
+		transform: translate(-50%, -50%);
+		transition: width 0.5s, height 0.5s;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: $white;
+		border: 1px solid $accent-color;
+
+		span {
+			width: 270%;
+			height: 270%;
+		}
+
+	}
 }

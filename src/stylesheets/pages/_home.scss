@@ -9,11 +9,11 @@
 // some slider styles
 .slide__title {
 	font-family: 'ElliotBold', sans-serif;
-	font-size: 2.5rem;
+	font-size: 2.625rem;
 	color: $white;
-	letter-spacing: 5px;
-	line-height: (33/40);
-	margin: 0 0 27px 0;
+	letter-spacing: 2px;
+	line-height: (33/42);
+	margin: 0 0 60px 0;
 	opacity: 0;
 	
 	@include respond-to(extrasmall) {
@@ -26,36 +26,13 @@
 }
 
 .slide__link {
-	position: relative;
-	padding: 16px 25px;
-	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1rem;
-	color: $white;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-radius: 4px;
-	letter-spacing: 1px;
+	@include btn($white, $btn-border-color-dark);
 	opacity: 0;
 	z-index: 2;
 	transition: all 0.3s;
-	
-	&:hover {
-		color: $white;
-		border: 1px solid $white;
-	}
 
 	@include respond-to(extrasmall) {
 		font-size: 1rem;
-	}
-
-	.arrow {
-		position: absolute;
-		right: -3px;
-		top: 50%;
-		margin-top: -3.5px;
-		width: 5px;
-		height: 9px;
-		fill: $grey;
-		z-index: 2;
 	}
 
 }
@@ -110,7 +87,7 @@
 	right: 50%;
 	margin-right: -8px;
 	z-index: 2;
-
+ 
 	@include respond-to(extrasmall) {
 		right: 32px;
 		margin-right: 0;
@@ -120,7 +97,20 @@
 		width: 16px;
 		height: 11px;
 		fill: $white;
+		animation: downLink 2s infinite; 
 	}	
+}
+
+@keyframes downLink {
+	0% {
+		transform: translateY(-2px) scale(1, 0.8);
+	}
+	50% {
+		transform: translateY(2px) scale(1, 0.8);		
+	}
+	100% {
+		transform: translateY(-2px) scale(1, 0.8);
+	}
 }
 
 // Consultation button
@@ -179,10 +169,10 @@
 	display: block;
 	max-width: 810px;
 	margin: 0 auto;
-	padding: 20px 0 25px 0;
+	padding: 15px 0 25px 0;
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 1.25rem;
-	color: $text-secondary-color;
+	color: $text-third-color;
 	line-height: (27/20);
 	text-align: center;
 }
@@ -203,33 +193,56 @@
 	position: relative;
 	padding: 0 18px 0 0;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1rem;
+	font-size: 0.9375rem;
 	color: $accent-color;
 	letter-spacing: 2px;
 	transition: 0.5s;
 
 	&:hover {
-		letter-spacing: 2.5px;
+		.icon {
+			right: -8px;
+
+			.st1 {
+				transform: scale(1);
+			}
+
+		}
 	}
 
-	.arrow {
-		margin-top: -4.5px;
-		width: 5px;
-		height: 9px;
+	.icon {
+		position: absolute;
+	    top: 4px;
+	    right: 0;
+		width: 22px;
 		fill: $accent-color;
+		transition: right 0.3s;
+
+		.st1 {
+			width: 14px;
+			height: 1px;
+			transform-origin: right;
+			transform: scale(0);
+			transition: all 0.3s;
+		}
+
+		.st2 {
+			width: 8px;
+			height: 9px;
+			transform: translateX(-7px);
+		}
 	}
 
 }
 
 .aboutus-cards__block {
-	margin: 145px 0 13px 0;
+	margin: 110px 0 13px 0;
 	justify-content: space-between;
 }
 
 .aboutus-card__icon {
 	display: block;
-	width: 33px;
-	height: 33px;
+	// width: 33px;
+	height: 40px;
 	margin: auto;
 	fill: $accent-color;
 
@@ -272,7 +285,7 @@
 	&.desktop {
 		display: block;
 		max-width: 1140px;
-		margin: 52px auto 57px auto;
+		margin: 32px auto 60px auto;
 		display: flex;
 		justify-content: space-between;
 
@@ -465,7 +478,7 @@
 
 	.service__link {
 		position: relative;
-		padding: 0 10px 0 0;
+		padding: 0 20px 0 0;
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 0.875rem;
 		color: $white;
@@ -473,17 +486,38 @@
 		transition: 0.5s;
 
 		&:hover {
-			letter-spacing: 4px;
+
+			.icon {
+				right: -8px;
+
+				.st1 {
+					transform: scale(1);
+				}
+			}
+
 		}
 
-		.arrow {
+		.icon {
 			position: absolute;
-			right: -3px;
-			top: 50%;
-			margin-top: -4.5px;
-			width: 5px;
-			height: 9px;
+		    top: 3px;
+		    right: 0;
+			width: 22px;
 			fill: $white;
+			transition: right 0.3s;
+
+			.st1 {
+				width: 14px;
+				height: 1px;
+				transform-origin: right;
+				transform: scale(0);
+				transition: all 0.3s;
+			}
+
+			.st2 {
+				width: 8px;
+				height: 9px;
+				transform: translateX(-7px);
+			}
 		}
 
 	}
@@ -492,48 +526,14 @@
 
 // Service link to service page
 .services-all__link {
-	position: relative;
-	padding: 0 10px 0 0;
-	font-family: 'ElliotRegular', sans-serif;
-	font-size: 0.9375rem;
-	color: $text-primary-color;
-	letter-spacing: 2px;
-	text-align: center;
-	transition: 0.5s;
-	z-index: 2;
-
-	@include respond-to(extrasmall) {
-		font-size: 0.75rem;
-		letter-spacing: 1px;
-	}
-
-	&:hover {
-		letter-spacing: 3px;
-
-		@include respond-to(extrasmall) {
-			letter-spacing: 1px;
-		}
-
-	}
-
-	.arrow {
-		margin-top: -4.5px;
-		width: 5px;
-		height: 9px;
-		fill: $text-primary-color;
-
-		@include respond-to(extrasmall) {
-			right: 0;
-		}
-
-	}
+	@include btn($text-third-color, $btn-border-color-light);
 
 }
 
 // Reviews block
 .line {
 	position: absolute;
-	bottom: -112px;
+	bottom: -92px;
 	left: 0;
 	width: 100%;
 	height: 1px;
@@ -551,23 +551,23 @@
 
 .review__name {
 	margin: 0;
-	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1.375rem;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 1.125rem;
 	color: $accent-color;
 }
 
 .review__seat {
-	margin: 16px 0 35px 0;
+	margin: 21px 0 27px 0;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1rem;
-	color: $text-third-color;
+	font-size: 0.9375rem;
+	color: $text-primary-color;
 }
 
 .review__text {
 	padding: 0 15px;
 	margin: 0;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1rem;
+	font-size: 1.0625rem;
 	color: $text-primary-color;
-	line-height: (21/16);
+	line-height: (24/15);
 }

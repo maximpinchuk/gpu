@@ -15,12 +15,11 @@
 }
 
 .contacts__subtitle {
-	margin: 20px 0 10px 0;
+	padding: 10px 0 0 0;
 	font-family: 'ElliotBold', sans-serif;
 	font-size: 1.125rem;
-	color: $text-primary-color;
+	color: $text-third-color;
 	letter-spacing: 1px;
-	text-align: left;
 
 	@include respond-to(extrasmall) {
 		text-align: center;
@@ -34,7 +33,6 @@
 	font-size: 1.125rem;
 	color: $text-primary-color;
 	transition: color 0.3s;
-	text-align: left;
 
 	@include respond-to(extrasmall) {
 		text-align: center;
@@ -50,78 +48,50 @@
 
 }
 
-.contacts__adress {
-	margin: 0;
-	padding: 0 0 5px 0;
-	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1.125rem;
-	color: $text-primary-color;
-	text-align: left;
-
-	@include respond-to(extrasmall) {
-		text-align: center;
-	}
-	
-}
-
 .contacts__text {
 	margin: 0;
-	padding: 13px 0 10px 0;
+	padding: 0;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1rem;
+	font-size: 1.0625rem;
 	color: $text-primary-color;
-	line-height: (21/16);
-	text-align: left;
-}
-
-.consultation-block__link {
-	position: relative;
-	margin: 0;
-	font-family: 'ElliotBold', sans-serif;
-	font-size: 1rem;
-	color: $text-primary-color;
-	line-height: (38/16);
-	letter-spacing: 1px;
-	transition: color 0.3s;
-	float: left;
-
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: 8px;
-		width: 100%;
-		height: 1px;
-		background: $text-primary-color;
-		transition: background 0.3s;				
-	}
-
-	&:hover {
-		color: $accent-color;
-
-		&:after {
-			background: $accent-color;
-		}
-
-	}
-
+	line-height: 1.33;
 }
 
 // Map styles
 #map {
-	height: 400px;
+	height: 450px;
 	background: #fafafa;
 }
 
 // Form styles
 .form {
+	padding: 40px 0 0 0;
+
+	.fieldset {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 100%;
+		max-width: 270px;
+		margin: auto;
+
+		@include respond-to(extrasmall) {
+			max-width: 100%;
+		}
+		@include respond-to(small) {
+			max-width: 100%;
+		}
+
+		&.fluid {
+			max-width: 100%;
+		}
+	}
 
 	.form__form-label {
 		display: block;
 		text-align: left;
 		padding: 0 0 0 18px;
 		font-family: 'ElliotRegular', sans-serif;
-		font-size: 0.875rem;
+		font-size: 0.8125rem;
 		color: $text-primary-color;
 
 		&.error {
@@ -131,36 +101,35 @@
 		&.valid {
 			color: $success;
 		}
-
 	}
 
 	.form__form-input {
 		box-sizing: border-box;
-		float: left;
-		width: 80%;
-		margin: 1px 0 30px 0;
+		margin: 0 0 60px 0;
 		padding: 11px 0 11px 18px;
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 1rem;
 		line-height: 1.33;
 		border: none;
-		border-bottom: 1px solid $text-primary-color;
+		border-bottom: 1px solid #cacaca;
 
 		@include respond-to(extrasmall) {
-			width: 100%;
+			margin: 0 0 40px 0;
 		}
 
 		@include respond-to(small) {
-			width: 100%;
+			margin: 0 0 40px 0;
 		}
 
 		&:focus {
 			outline: none;
+			border-bottom: 1px solid $text-third-color;
 		}
 
 		&:active {
 			color: $text-primary-color;
 			outline: none;
+			border-bottom: 1px solid $text-third-color;
 		}
 
 		&.error {
@@ -170,20 +139,18 @@
 		&.valid {
 			border-bottom: 1px solid $success;
 		}
-		
+
 	}
 
 	.form__form-textarea {
 		box-sizing: border-box;
-		float: left;
-		width: 94%;
 		min-height: 100px;
-		margin: 3px 0 0 0;
+		margin: 0;
 		padding: 11px 0 11px 18px;
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 1rem;
 		border: none;
-		border-bottom: 1px solid $text-primary-color;
+		border-bottom: 1px solid #cacaca;
 		resize: none;
 
 		@include respond-to(extrasmall) {
@@ -196,35 +163,21 @@
 
 		&:focus {
 			outline: none;
+			border-bottom: 1px solid $text-third-color;
 		}
 
 		&:active {
 			color: $text-primary-color;
 			outline: none;
+			border-bottom: 1px solid $text-third-color;
 		}
 
 	}
 
 	.form__btn {
-		box-sizing: border-box;
-		float: left;
-		width: 170px;
-		height: 48px;
-		margin: 90px 0 0 0;
-		border: 1px solid $text-primary-color;
-		border-radius: 4px;
+		@include btn($text-third-color, $btn-border-color-light);
 		background: transparent;
-		font-family: 'ElliotRegular', sans-serif;
-		font-size: 0.9125rem;
-		color: $text-primary-color;
-
-		@include respond-to(extrasmall) {
-			float: none;
-		}
-
-		@include respond-to(small) {
-			float: none;
-		}
+		margin: 50px 0 0 0;
 
 		&:focus {
 			outline: none;
@@ -232,4 +185,23 @@
 
 	}
 
+}
+
+input:focus + label {
+	color: $text-third-color !important;
+}
+input.error + label {
+	color: $error !important;
+}
+input.valid + label {
+	color: $success !important;
+}
+textarea:focus + label {
+	color: $text-third-color !important;
+}
+textarea.error + label {
+	color: $error !important;
+}
+textarea.valid + label {
+	color: $success !important;
 }

@@ -26,6 +26,8 @@
 @import "components/navigation-panel";
 @import "components/block";
 @import "components/menu-adaptive";
+@import "components/scrolldown-line";
+@import "components/breadcrumbs";
 
 // pages
 @import "pages/home";
@@ -51,4 +53,10 @@
 }
 .transparent {
 	opacity: 0.4;
+}
+
+.col {
+	@include respond-to(extrasmall) {
+		padding: 0;
+	}
 }

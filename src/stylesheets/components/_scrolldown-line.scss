@@ -1,0 +1,14 @@
+// Scrolldown vertical line
+
+
+
+.vertical-line {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	height: 89px;
+	margin-left: -1px;
+	background: $accent-color;
+	transform: translateY(50%);
+}

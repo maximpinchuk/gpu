@@ -127,21 +127,6 @@ $(document).ready(function() {
 
 
 
-	// Staff slider init
-	var staffSlider = new Swiper('.swiper-container.staff-slider', {
-		slidesPerView: 3,
-		breakpoints: {
-			480: {
-				slidesPerView: 1
-			},
-			640: {
-				slidesPerView: 2
-			}
-		}
-	});
-
-
-
 	// Services slider init (on adaptive only)
 	var servicesSlider = new Swiper('.swiper-container.services-slider', {
 		loop: true,
@@ -237,23 +222,7 @@ $(document).ready(function() {
 
 
 
-	// Phone mask
-	$("#tel").mask("+375 (99) 999 99 99");
-
-
-
-	// $(window).scroll(function() {    
-	// 	if ( $(this).scrollTop() > 560 ) {
-	// 		$('.nav-panel').css({
-	// 			position: 'fixed'
-	// 		});      
-	// 	} else {
-	// 		$('.nav-panel').css({
-	// 			position: 'absolute'
-	// 		});
-	// 	}
-	// });
-
+	// Menu appearance on scrollTop
 	var lastScrollTop = 0;
 	$(window).scroll(function(event) {
 		var st = $(this).scrollTop();
@@ -270,7 +239,36 @@ $(document).ready(function() {
 
 
 
+	// Buttons hover effect
+	$(function() {  
+	  $('.btn-js')
+	    .on('mouseenter', function(e) {
+				var parentOffset = $(this).offset(),
+	      		relX = e.pageX - parentOffset.left,
+	      		relY = e.pageY - parentOffset.top;
+				$(this).find('span').css({top:relY, left:relX})
+	    })
+	    .on('mouseout', function(e) {
+				var parentOffset = $(this).offset(),
+	      		relX = e.pageX - parentOffset.left,
+	      		relY = e.pageY - parentOffset.top;
+	    	$(this).find('span').css({top:relY, left:relX})
+	    });
+	});
+
+
+
+	// Phone mask
+	$("#tel").mask("+375 (99) 999 99 99");
+
+
+
 	//= controllers/form.handlers.js
 	//= controllers/validation.js
+
+
+
+	// Map init
+	
 
 });

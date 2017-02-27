@@ -12,8 +12,8 @@ var simpleValidation = function() {
 		// Defining basic variables, bro
 		var validateForm = $(this);
 		var validate = {};
-		var validateThis = $(this).find('.form__form-input');
-		var validatingLength = $(this).find('.form__form-input').length;
+		var validateThis = $(this).find('.input__validation');
+		var validatingLength = $(this).find('.input__validation').length;
 		var submitBtn = $(this).find('.submit');
 
 		// For Loop Getting Elements to Validate
@@ -22,7 +22,7 @@ var simpleValidation = function() {
 			validate['input'+i] = false;
 		}
 
-		$('.form__form-input').blur(function() {
+		$('.input__validation').blur(function() {
 			var index =  $(this).prevAll().length+1;
 			var validateThisVal = $(this).val();
 			var validateThisType = $(this).attr('type');

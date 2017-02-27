@@ -91,7 +91,7 @@
 
 	// styles for desktop .nav-panel
 	position: absolute;
-	top: 45px;
+	top: 30px;
 	left: 0;
 	width: 100%;
 	display: flex;
@@ -104,6 +104,17 @@
 		top: 0;
 		padding: 15px 0;
 		background: rgba(0, 0, 0, 0.7);
+		transform: trnslateY(-100%);
+		animation: navFixed 0.5s forwards;
+	}
+
+	@keyframes navFixed {
+		from {
+			transform: translateY(-100%);
+		}
+		to {
+			transform: translateY(0);	
+		}
 	}
 
 	@include respond-to(extrasmall) {
@@ -206,9 +217,9 @@
 	display: none;
 	position: fixed;
 	padding: 0 15px 96px 15px;
-	top: 107px;
+	top: 92px;
 	background: #fff;
-	z-index: 6;
+	z-index: 5;
 }
 
 .services-menu__title {
