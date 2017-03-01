@@ -1,0 +1,44 @@
+// Header styles
+.header {
+	position: relative;
+	height: 76.6vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	&.aboutus {
+		background: url('../img/BG2.jpg') no-repeat;
+		background-size: cover;
+	}
+
+	&.services {
+		background: url('../img/BG3.jpg') no-repeat;
+		background-size: cover;
+	}
+
+	&.faq {
+		background: url('../img/BG2.jpg') no-repeat;
+		background-size: cover;
+	}
+
+	&.contacts {
+		background: url('../img/BG2.jpg') no-repeat;
+		background-size: cover;
+	}
+}
+
+.header__title {
+	margin: 0;
+	font-family: 'ElliotPro', sans-serif;
+	font-size: 2.625rem;
+	color: $white;
+	line-height: (53/42);
+	letter-spacing: 2px;
+
+	@include respond-to(extrasmall) {
+		font-size: 2rem;
+		line-height: (43/32);
+		text-align: center;
+	}
+}

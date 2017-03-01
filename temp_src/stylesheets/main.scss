@@ -1,0 +1,63 @@
+/*!
+ * Project: GPU
+ * Description: GPU website
+ * Website URI: www.gpu.by
+ * Author: Spaced DA
+ * Author URI: http://www.spaced.by
+ * Version: 1.0.0
+ */
+
+
+
+// base
+@import "base/normalize";
+@import "base/typography";
+
+// utils
+@import "utils/variables";
+@import "utils/mixins";
+
+// layout
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+// components
+@import "components/navigation-panel";
+@import "components/block";
+@import "components/menu-adaptive";
+@import "components/scrolldown-line";
+@import "components/breadcrumbs";
+
+// pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/services";
+@import "pages/faq";
+@import "pages/contacts";
+@import "pages/calculator";
+
+// vendors
+@import "vendors/swiper";
+@import "vendors/animate";
+@import "vendors/remodal";
+@import "vendors/remodal-default-theme";
+
+// vendors-extensions
+@import "vendors-extensions/swiper";
+@import "vendors-extensions/animate";
+
+
+// Some extra classes
+.blur {
+	filter: blur(1px);
+}
+.transparent {
+	opacity: 0.4;
+}
+
+.col {
+	@include respond-to(extrasmall) {
+		padding: 0;
+	}
+}

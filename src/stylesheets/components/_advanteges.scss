@@ -1,0 +1,108 @@
+// styles for Adventeges block
+
+
+// About us block
+.aboutus__title {
+	display: block;
+	max-width: 810px;
+	margin: 0 auto;
+	padding: 15px 0 25px 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.25rem;
+	color: $text-third-color;
+	line-height: (27/20);
+	text-align: center;
+}
+
+.aboutus__descr {
+	display: block;
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 0 52px 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-primary-color;
+	line-height: (24/18);
+	text-align: center;
+}
+
+.aboutus__link {
+	position: relative;
+	display: inline-block;
+	margin: 0 0 110px 0;
+	padding: 0 18px 0 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 0.9375rem;
+	color: $accent-color;
+	letter-spacing: 2px;
+	transition: 0.5s;
+
+	&:hover {
+		.icon {
+			right: -8px;
+
+			.st1 {
+				transform: scale(1);
+			}
+
+		}
+	}
+
+	.icon {
+		position: absolute;
+	    top: 4px;
+	    right: 0;
+		width: 22px;
+		fill: $accent-color;
+		transition: right 0.3s;
+
+		.st1 {
+			width: 14px;
+			height: 1px;
+			transform-origin: right;
+			transform: scale(0);
+			transition: all 0.3s;
+		}
+
+		.st2 {
+			width: 8px;
+			height: 9px;
+			transform: translateX(-7px);
+		}
+	}
+
+}
+
+.aboutus-cards__block {
+	margin: 15px 0 13px 0;
+	justify-content: space-between;
+}
+
+.aboutus-card__icon {
+	display: block;
+	height: 40px;
+	margin: auto;
+	fill: $accent-color;
+
+	.st0 {
+		fill: $accent-color;
+	}
+}
+
+.aboutus-card__title {
+	margin: 40px 0 20px 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-secondary-color;
+	text-align: center;
+}
+
+.aboutus-card__descr {
+	margin: 0;
+	padding: 0 40px;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1.125rem;
+	color: $text-primary-color;
+	line-height: (24/18);
+	text-align: center;
+}

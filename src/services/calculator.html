@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>GPU</title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta name="description" content="">
+
+		<link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+	</head>
+	<body>
+
+		<!-- Header -->
+
+		<header class="header services">
+
+			<!-- Navigation panel -->
+
+			//= templates/navigation.html
+
+			<!-- /Navigation -->
+
+
+
+			<!-- Services menu -->
+
+			<div class="services-menu__bg"></div>
+			<div class="services-menu grid grid--container">
+				<div class="row">
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-4 col--xl-4">
+						<h5 class="services-menu__title">РАЗОВАЯ УСЛУГА</h5>
+						<ul class="services-menu__list">
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Регистрация юредических лиц</a>
+							</li>
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Регистрация ИП</a>
+							</li>
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Восстановление учета</a>
+							</li>
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Ликвидация предприятия</a>
+							</li>
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Консультация бухгалтера</a>
+							</li>
+						</ul>
+						<a href="services.html" class="services-menu__link">ПОЛНЫЙ СПИСОК УСЛУГ
+							<svg class="services-menu__link__icon" viewBox="0 0 22.9 8.9">
+								<g>
+									<g>
+										<rect width="14px" height="1px" y="3.9" class="st1"></rect>
+									</g>
+									<g>
+										<polygon class="st2" points="17.7,8.9 16.9,8 21.1,4.5 16.9,0.9 17.7,0 22.9,4.5     "></polygon>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-4 col--xl-4">
+						<h5 class="services-menu__title">АУТСОРСИНГ</h5>
+						<ul class="services-menu__list">
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Кадровый учет</a>
+							</li>
+							<li class="services-menu__list__item">
+								<a href="services/buhgalterskoe-obsluzhivanie.html" class="services-menu__list__item__link">Бухгалтерское сопровождение</a>
+							</li>
+							<li class="services-menu__list__item">
+								<a href="" class="services-menu__list__item__link">Налоговая отчетность</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-4 col--xl-4">
+						<h5 class="services-menu__title">КАЛЬКУЛЯТОР</h5>
+						<p class="services-menu__text">Рассчитайте стоимость услуги<br>с помощью нашего калькулятора</p>
+						<a href="services/calculator.html" class="services-menu__link red">РАССЧИТАТЬ СТОИМОСТЬ
+							<svg class="services-menu__link__icon red" viewBox="0 0 22.9 8.9">
+								<g>
+									<g>
+										<rect width="14px" height="1px" y="3.9" class="st1"></rect>
+									</g>
+									<g>
+										<polygon class="st2" points="17.7,8.9 16.9,8 21.1,4.5 16.9,0.9 17.7,0 22.9,4.5     "></polygon>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- /Services menu -->
+			<!-- /Navigation panel -->
+
+			<div class="breadcrumbs">
+				<a href="../index.html" class="breadcrumbs__item">ГЛАВНАЯ</a>
+				<div class="breadcrumbs__line"></div>
+				<a href="../services.html" class="breadcrumbs__item">УСЛУГИ</a>
+				<div class="breadcrumbs__line"></div>
+				<a href="calculator.html" class="breadcrumbs__item active">КАЛЬКУЛЯТОР</a>
+			</div>
+
+			<h1 class="header__title">КАЛЬКУЛЯТОР УСЛУГ</h1>
+			<div class="vertical-line"></div>
+
+		</header>
+
+		<!-- /Header -->
+
+		<!-- Calculator -->
+		
+		<div class="grid grid--container block">
+			<div class="row">
+				<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+					<h3 class="block__title">НАШИ УСЛУГИ</h3>
+					<h2 class="block__subtitle"><strong>УСУЛГИ, КОТОРЫЕ МЫ ПРЕДОСТАВЛЯЕМ</strong></h2>
+					<p class="calculator__descr">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+				</div>
+			</div>
+			<form class="calculator">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<select id="kind-of-activity" class="custom-select" placeholder="Выберите вид деятельности">
+								<option value="none" selected>Выберите вид деятельности</option>
+								<option value="vid1">1</option>
+								<option value="vid2">2</option>
+								<option value="vid3">3</option>
+								<option value="vid4">4</option>
+							</select>
+							<label class="label" for="kind-of-activity">ВИД ДЕЯТЕЛЬНОСТИ</label>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<input id="amount-of-points" class="input" type="text" name="" placeholder="Введите число точек" disabled>
+							<label class="label" for="amount-of-points">КОЛИЧЕСТВО ТОЧЕК</label>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<input id="amount-of-employees" class="input" type="text" name="" placeholder="Введите число сотрудников">
+							<label class="label" for="amount-of-employees">КОЛИЧЕСТВО СОТРУДНИКОВ</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<select id="system-of-taxation" class="custom-select" name="sources" placeholder="Выберите систему налогообложения">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							<label class="label" for="system-of-taxation">СИСТЕМА НАЛОГООБЛОЖЕНИЯ</label>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-8 col--xl-8">
+						<div class="fieldset">
+							<select id="amout-of-documentation" class="custom-select" placeholder="Выберите число первичной документации">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							<label class="label" for="amout-of-documentation">КОЛИЧЕСТВО ПЕРВИЧНОЙ ДОКУМЕНТАЦИИ В МЕСЯЦ
+								<div class="tooltip">
+									<svg class="tooltip__icon" width="12px" height="12px" viewBox="0 0 400 400">
+										<g>
+											<g>
+												<path d="M199.996,0C89.719,0,0,89.72,0,200c0,110.279,89.719,200,199.996,200C310.281,400,400,310.279,400,200    C400,89.72,310.281,0,199.996,0z M199.996,373.77C104.187,373.77,26.23,295.816,26.23,200    c0-95.817,77.957-173.769,173.766-173.769c95.816,0,173.772,77.953,173.772,173.769    C373.769,295.816,295.812,373.77,199.996,373.77z"/>
+												<path d="M199.996,91.382c-35.176,0-63.789,28.616-63.789,63.793c0,7.243,5.871,13.115,13.113,13.115    c7.246,0,13.117-5.873,13.117-13.115c0-20.71,16.848-37.562,37.559-37.562c20.719,0,37.566,16.852,37.566,37.562    c0,20.714-16.849,37.566-37.566,37.566c-7.242,0-13.113,5.873-13.113,13.114v45.684c0,7.243,5.871,13.115,13.113,13.115    s13.117-5.872,13.117-13.115v-33.938c28.905-6.064,50.68-31.746,50.68-62.427C263.793,119.998,235.176,91.382,199.996,91.382z"/>
+												<path d="M200.004,273.738c-9.086,0-16.465,7.371-16.465,16.462s7.379,16.465,16.465,16.465c9.094,0,16.457-7.374,16.457-16.465    S209.098,273.738,200.004,273.738z"/>
+											</g>
+										</g>
+									</svg>
+									<div class="tooltip__block">
+										Это бухгалтерские документы, которые составляются в момент осуществления хозяйственных операций, и свидетельствуют об их совершении.
+									</div>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<select id="estimated-revenue" class="custom-select" placeholder="Выберите ориентировочную выручку">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							<label class="label" for="estimated-revenue">ОРИЕНТИРОВОЧНАЯ ВЫРУЧКА</label>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-8 col--xl-8">
+						<div class="fieldset">
+							<input id="foreign-economic-activity" class="checkbox" type="checkbox">
+							<label class="label" for="foreign-economic-activity">НАЛИЧИЕ ВНЕШНЕЭКОНОМИЧЕСКОЙ ДЕЯТЕЛЬНОСТИ</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="calc__price__text">ЭТО ОБОЙДЕТСЯ ВСЕГО ОКОЛО</p>
+						<p class="calc__price__count"><span id="price">450</span> рублей</p>
+						<button id="calc__btn" class="calc__btn btn-js">Рассчитать<span></span></button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- /Calculator -->
+
+
+
+		<!-- Footer -->
+
+		//= templates/footer.html
+
+		<!-- /Footer -->
+
+	</body>
+</html>

@@ -1,0 +1,119 @@
+// Services page style
+
+
+
+// Service preview styles
+.service-block {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 80px 15px 0 15px;
+	background: $service-card-bg;
+
+	&.first-card {
+		margin: 50px 15px 0 15px;
+	}
+
+	@include respond-to(extrasmall) {
+		flex-direction: column;
+	}
+
+	@include respond-to(small) {
+		align-items: flex-start;
+	}
+
+	&__img {
+		width: 360px;
+		height: 256px;
+
+		@include respond-to(extrasmall) {
+			width: 100%;
+			height: auto;
+		}
+
+	}
+
+	&__aside {
+		padding: 0 15px 0 40px;
+		text-align: left;
+
+		@include respond-to(extrasmall) {
+			padding: 30px 15px;
+		}
+
+		&__title {
+			margin: 0;
+			font-family: 'ElliotBold', sans-serif;
+			font-size: 1.3125rem;
+			color: $text-third-color;
+			line-height: (26/21);
+			letter-spacing: 1px;
+		}
+
+		&__price {
+			margin: 5px 0 19px 0;
+			font-family: 'ElliotRegular', sans-serif;
+			font-size: 0.8125rem;
+			color: $accent-color;
+			letter-spacing: 0.5px;
+
+			span {
+				font-size: 1rem;
+			}
+		}
+
+		&__descr {
+			margin: 0 0 20px 0;
+			font-family: 'ElliotRegular', sans-serif;
+			font-size: 1.0625rem;
+			color: $text-primary-color;
+			line-height: (24/17);
+		}
+
+		&__link {
+			position: relative;
+			padding: 0 20px 0 0;
+			font-family: 'ElliotBold', sans-serif;
+			font-size: 0.875rem;
+			color: $text-primary-color;
+			letter-spacing: 1px;
+
+			&:hover {
+				.arrow {
+					right: -8px;
+
+					.st1 {
+						transform: scale(1);
+					}
+
+				}
+			}
+
+			.arrow {
+				position: absolute;
+			    top: 50%;
+			    margin-top: -4px;
+			    right: 0;
+				width: 22px;
+				fill: $text-primary-color;
+				transition: right 0.3s;
+
+				.st1 {
+					width: 14px;
+					height: 1px;
+					transform-origin: right;
+					transform: scale(0);
+					transition: all 0.3s;
+				}
+
+				.st2 {
+					width: 8px;
+					height: 9px;
+					transform: translateX(-7px);
+				}
+			}
+
+		}
+
+	}
+}

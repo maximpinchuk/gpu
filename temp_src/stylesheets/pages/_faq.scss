@@ -1,0 +1,161 @@
+// faq page styles
+
+
+
+.faq-list {
+	margin: 0 0 35px 0;
+	padding: 0 0 0 15px;
+	list-style: none;
+	text-align: left;
+
+	&__item {
+		padding: 6px 15px 6px 0;
+		font-family: 'ElliotBold', sans-serif;
+		font-family: 1.5rem;
+		color: $accent-color;
+
+		&__link {
+			position: relative;
+			padding: 0 25px 0 0;
+			font-family: 'ElliotRegular', sans-serif;
+			font-family: 1.3125rem;
+			color: $text-primary-color;
+
+			&:hover {
+				.arrow {
+					right: -8px;
+
+					.st1 {
+						transform: scale(1);
+					}
+
+				}
+			}
+
+			.arrow {
+				position: absolute;
+			    bottom: 3px;
+			    right: 0;
+				width: 22px;
+				fill: $accent-color;
+				transition: right 0.3s;
+
+				.st1 {
+					width: 14px;
+					height: 1px;
+					transform-origin: right;
+					transform: scale(0);
+					transition: all 0.3s;
+				}
+
+				.st2 {
+					width: 8px;
+					height: 9px;
+					transform: translateX(-7px);
+				}	
+			}
+
+		}
+	}
+}
+
+.faq-answer {
+	padding: 27px 15px;
+	text-align: left;
+
+	&__title {
+		margin: 0;
+		padding: 0 0 15px 0;
+		font-family: 'ElliotBold', sans-serif;
+		font-size: 1.3125rem;
+		color: $text-third-color;
+
+		span {
+			font-family: 'ElliotBold', sans-serif;
+			font-size: 1.5rem;
+			color: $text-third-color;
+		}
+	}
+
+	&__text {
+		margin: 7px 0 0 0;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1.125rem;
+		color: $text-primary-color;
+		line-height: (24/17);
+	}
+}
+
+.faq__btn-container {
+	display: flex;
+	justify-content: center;
+	margin: 47px 0 0 0;
+
+	@include respond-to(extrasmall) {
+		flex-direction: column;
+	}
+
+	.btn {
+		@include btn($text-third-color, $btn-border-color-light);
+		margin: 0 7px;
+
+		@include respond-to(extrasmall) {
+			width: 150px;
+			margin: 15px auto;
+		}
+	}
+
+	.link {
+		position: relative;
+		display: inline-block;
+		margin: 0 7px;
+		padding: 16px 25px;
+		font-family: 'ElliotBold', sans-serif;
+		font-size: 0.9375rem;
+		color: $accent-color;
+		letter-spacing: 1px;
+
+		@include respond-to(extrasmall) {
+			width: 150px;
+			margin: 15px auto;
+		}
+
+		&:hover {
+
+			.link__icon {
+				right: -8px;
+
+				.st1 {
+					transform: scale(1);
+				}
+
+			}
+
+		}
+
+		&__icon {
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -5px;
+		    right: 0;
+			width: 22px;
+			fill: $accent-color;
+			transition: right 0.3s;
+
+			.st1 {
+				width: 14px;
+				height: 1px;
+				transform-origin: right;
+				transform: scale(0);
+				transition: all 0.3s;
+			}
+
+			.st2 {
+				width: 8px;
+				height: 9px;
+				transform: translateX(-7px);
+			}
+
+		}
+	}
+}

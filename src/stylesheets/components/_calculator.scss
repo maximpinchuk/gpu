@@ -1,0 +1,250 @@
+// Calculator styles
+
+
+.calculator {
+
+	.fieldset {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		margin: 30px 0;
+
+		@include respond-to(extrasmall) {
+			padding: 0 15px;
+		}
+
+		@include respond-to(small) {
+			padding: 0 15px;
+		}
+
+		.label {
+			position: relative;
+			font-family: 'ElliotRegular', sans-serif;
+			font-size: 0.8125rem;
+			color: $text-third-color;
+			margin: 0 0 10px 15px;
+		}
+
+		.input {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px 0 10px 15px;
+			font-family: 'ElliotRegular', sans-serif;
+			font-size: 1rem;
+			line-height: 1.33;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #cacaca;
+
+			&:focus {
+				border-bottom: 1px solid $text-third-color;
+			}
+		}
+	}
+
+}
+
+input[disabled] {
+	background: transparent;
+}
+input[disabled] + label {
+	opacity: 0.5;
+}
+
+.tooltip {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	&__icon {
+		position: absolute;
+		top: -6px;
+		right: -20px;
+		width: 12px;
+		height: 12px;
+		fill: $text-third-color;
+		opacity: 0.5;
+		cursor: pointer;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__block {
+		display: none;
+		max-width: 210px;
+		position: relative;
+		top: -90px;
+		left: 110%;
+		padding: 10px;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 0.75rem;
+		color: $white;
+		line-height: (14/12);
+		background: $text-third-color;
+	}
+
+}
+
+
+
+
+.calc__price__text {
+	margin: 0;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 0.8125rem;
+	color: $text-primary-color;
+}
+
+.calc__price__count {
+	margin: 10px 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 1.3125rem;
+	color: $accent-color;
+
+	span {
+		font-size: 2rem;
+	}
+}
+
+.calc__btn {
+	@include btn($text-third-color, $btn-border-color-light);
+	background: transparent;
+	margin: 37px 0 0 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+
+/** Custom Select **/
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+	width: 100%;
+}
+.custom-select-wrapper select {
+	display: none;
+}
+.custom-select {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+
+	&.opened {
+		.custom-select-trigger {
+			border-bottom: 1px solid $text-third-color;
+		}
+	}
+}
+.custom-select-trigger {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 10px 0 10px 15px;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1rem;
+	line-height: 1.33;
+	cursor: pointer;
+	background: transparent;
+	border-bottom: 1px solid #cacaca;
+	text-align: left;
+}
+.custom-select-trigger:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 6px; 
+    height: 6px;
+    top: 50%; 
+    right: 25px;
+    border-bottom: 1px solid $text-third-color;
+    border-right: 1px solid $text-third-color;
+    transform: rotate(45deg);
+    transition: all .4s ease-in-out;
+    transform-origin: 50%;
+}
+.custom-select.opened .custom-select-trigger:after {
+	transform: rotate(-135deg);
+}
+.custom-options {
+	box-sizing: border-box;
+	position: absolute;
+	display: block;
+	top: 100%; 
+	left: 0;
+	min-width: 100%;
+	background: $white;
+	border: 1px solid #b5b5b5;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-15px);
+	transition: all .4s ease-in-out;
+	z-index: 3;
+}
+.custom-select.opened .custom-options {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transform: translateY(0);
+}
+.custom-option {
+	position: relative;
+	display: block;
+	padding: 10px 0 10px 15px;
+	border-bottom: 1px solid #b5b5b5;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1rem;
+	line-height: 1.33;
+	text-align: left;
+	cursor: pointer;
+	transition: all .4s ease-in-out;
+}
+.custom-option:hover,
+.custom-option.selection {
+	background: #f9f9f9;
+}
+
+
+// Custom Checkbox
+.checkbox {
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	margin: 15px 0 0 15px;
+}
+.checkbox:before {
+	transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+	transform: rotate(-45deg) scale(0, 0);
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 3px;
+	z-index: 1;
+	width: 8px;
+	height: 5px;
+	border: 2px solid $accent-color;
+	border-top-style: none;
+	border-right-style: none;
+}
+.checkbox:checked:before {
+	transform: rotate(-45deg) scale(1, 1);
+}
+.checkbox:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 13px;
+	height: 13px;
+	background: #fff;
+	border: 1px solid $text-third-color;
+	border-radius: 2px;
+	cursor: pointer;
+}

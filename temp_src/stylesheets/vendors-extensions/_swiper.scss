@@ -1,0 +1,311 @@
+.swiper-container {
+
+    // Header slider extension styles
+    &.header-slider {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+            position: relative;
+            overflow: hidden;
+
+            .slide-inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-size: cover;
+                background-position: center;
+
+                &.first {
+                    background: url('../img/BG.jpg') no-repeat;
+                    background-size: cover;
+                }
+
+                &.second {
+                    background: url('../img/BG2.jpg') no-repeat;
+                    background-size: cover;
+                }
+
+                &.third {
+                    background: url('../img/BG3.jpg') no-repeat;
+                    background-size: cover;
+                }   
+
+            }
+
+        }
+
+        .swiper-pagination {
+            bottom: 36px;
+            text-align: left;
+            padding: 0 70px;
+
+            @include respond-to(extrasmall) {
+                padding: 0 20px;
+            }
+
+            &-bullet {
+                position: relative;
+                font-family: 'ElliotRegular';
+                font-size: 0.875rem;
+                color: $pagination-text-color;
+                background: transparent;
+                transition: 0.3s;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 98%;
+                    height: 1px;
+                    opacity: 0;
+                    background: $white;
+                }
+
+                &:nth-child(2) {
+                    margin: 0 62px;
+
+                    @include respond-to(extrasmall) {
+                        margin: 0 10px;
+                    }
+
+                }
+
+                &:hover {
+                    color: $white;
+                }
+
+                &.swiper-pagination-bullet-active {
+                    color: $white;
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    // Review slider extensions styles
+    // variables
+    $num-of-tabs: 4;
+    // $tabs-header-width: 262px;
+
+    @mixin tab-width($tab-width) {
+        width: $tab-width;
+    }
+
+    @mixin tabs {
+        @for $i from 1 through $num-of-tabs {
+            &:nth-child(2) {
+                &.swiper-pagination-bullet-active {
+                    ~ .active-mark {
+                        // left: $tabs-header-width * ($i - 1);
+                        @include respond-to(large) {
+                            left: (262px * 1) + 45px;
+                        }
+
+                        @include respond-to(medium) {
+                            left: (235px * 1) + 15px;
+                        }
+                        
+                    }
+                }
+            }
+            &:nth-child(3) {
+                &.swiper-pagination-bullet-active {
+                    ~ .active-mark {
+                        // left: $tabs-header-width * ($i - 1);
+                        @include respond-to(large) {
+                            left: (262px * 2) + 76px;
+                        }
+
+                        @include respond-to(medium) {
+                            left: (235px * 2) + 15px;
+                        }
+
+                    }
+                }
+            }
+            &:nth-child(4) {
+                &.swiper-pagination-bullet-active {
+                    ~ .active-mark {
+                        // left: $tabs-header-width * ($i - 1);
+                        @include respond-to(large) {
+                            left: (262px * 3) + 106px;
+                        }
+
+                        @include respond-to(medium) {
+                            left: (235px * 3) + 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.reviews-slider {
+        width: 100%;
+        height: 100%;
+        margin: 24px auto 0 auto;
+
+        .swiper-slide {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 55px 90px 105px 90px;
+
+            @include respond-to(extrasmall) {
+                padding: 0 0 85px 0;
+            }
+
+            @include respond-to(small) {
+                padding: 0 0 85px 0;
+            }
+
+        }
+
+        .swiper-pagination {
+            box-sizing: border-box;
+            position: static;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+
+            @include respond-to(extrasmall) {
+                position: absolute;
+                justify-content: center;
+            }
+
+            @include respond-to(small) {
+                position: absolute;
+                justify-content: center;
+            }
+
+            .swiper-pagination-bullet {
+                box-sizing: border-box;
+                padding: 15px 0 37px 0;
+                font-family: 'ElliotBold', sans-serif;
+                font-size: 1rem;
+                color: $text-third-color;
+                background: transparent;
+                opacity: 1;
+                text-align: center;
+                cursor: pointer;
+
+                @include respond-to(large) {
+                    width: 262px;
+                }
+
+                @include respond-to(medium) {
+                    width: 235px;
+                }
+
+                @include tabs;
+                &:first-of-type {
+                    &.swiper-pagination-bullet-active {
+                        ~ .active-mark {
+                            left: 15px;
+                        }
+                    }
+                }
+
+                @include respond-to(extrasmall) {
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 10px;
+                    padding: 0;
+                    background: #27a1df;
+                    border-radius: 50%;
+                    transition: transform 0.3s;
+                }
+
+                @include respond-to(small) {
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 10px;
+                    padding: 0;
+                    background: #27a1df;
+                    border-radius: 50%;
+                    transition: transform 0.3s;
+                }
+
+                &.swiper-pagination-bullet-active {
+
+                    @include respond-to(extrasmall) {
+                        transform: scale(1.4);
+                    }
+
+                    @include respond-to(small) {
+                        transform: scale(1.4);
+                    }
+
+                }
+
+            }
+
+            .active-mark {
+                position: absolute;
+                top: 67px;
+                left: 0;
+                height: 2px;
+                background: $accent-color;
+                transition: left 0.5s ease-out;
+
+                @include respond-to(large) {
+
+                    @include tab-width(262px);    
+                
+                }
+
+                @include respond-to(medium) {
+
+                    @include tab-width(235px);
+
+                }
+                
+            }
+
+        }
+
+    }
+
+    // Services slider (only on adaptive version)
+    &.services-slider {
+        width: 100%;
+
+        .services-slider-pagination {
+
+            .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                margin: 0 10px;
+                border: 1px solid $white;
+                border-radius: 50%;
+                background: transparent;
+                transition: transform 0.3s;
+
+                &.swiper-pagination-bullet-active {
+                    transform: scale(1.4);
+                }
+
+            }
+
+        }
+
+    }
+
+}

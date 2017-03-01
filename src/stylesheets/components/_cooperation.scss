@@ -1,0 +1,65 @@
+// Cooperation block styles
+
+
+
+.cooperation {
+	text-align: center;
+
+	&__title {
+		margin: 0;
+		font-family: 'ElliotBold', sans-serif;
+		font-size: 1.875rem;
+		color: $text-third-color;
+		line-height: 1.33;
+		letter-spacing: 1px;
+	}
+
+	&__subtitle {
+		margin: 20px 0 50px 0;
+		padding: 0 110px;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1.25rem;
+		color: $text-third-color;
+		line-height: 1.33;
+
+		@include respond-to(extrasmall) {
+			padding: 0 15px;
+		}
+
+		@include respond-to(small) {
+			padding: 0 15px;
+		}
+	}
+
+	&__tel {
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1.25rem;
+		color: $text-primary-color;
+		transition: color 0.3s;
+
+		@include respond-to(extrasmall) {
+			font-size: 1rem;
+		}
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	span {
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1.25rem;
+		color: $accent-color;
+	}
+
+	&__btn {
+		@include btn($text-third-color, $btn-border-color-light);
+		background: transparent;
+	    display: block;
+    	margin: 58px auto 0 auto;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

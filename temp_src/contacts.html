@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>GPU</title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+
+		<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	</head>
+	<body>
+
+		<header class="header contacts">
+
+			<!-- Navigation panel -->
+			//= templates/navigation.html
+			<!-- /Navigation panel -->
+
+			<div class="breadcrumbs">
+				<a href="index.html" class="breadcrumbs__item">ГЛАВНАЯ</a>
+				<div class="breadcrumbs__line"></div>
+				<a href="contacts.html" class="breadcrumbs__item active">КОНТАКТЫ</a>
+			</div>
+
+			<h1 class="header__title">НАШИ КОНТАКТЫ</h1>
+			<div class="vertical-line"></div>
+
+		</header>
+
+		<!-- Contacts -->
+
+		<div class="grid grid--container block">
+			<div class="row">
+				<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+					<h2 class="block__title">НАШИ КОНТАКТЫ</h2>
+					<h3 class="block__subtitle">КАК С НАМИ СВЯЗАТЬСЯ</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col--xs-12 col--sm-12 col--md-6 col--lg-3 col--xl-3">
+					<p class="contacts__subtitle">ТЕЛЕФОНЫ</p>
+					<a href="tel:+375173605051" class="contacts__link contacts__tel1">8 (017) 360 50 51</a>
+					<a href="tel:+375296863797" class="contacts__link contacts__tel2">8 (029) 686 37 97</a>
+				</div>
+				<div class="col col--xs-12 col--sm-12 col--md-6 col--lg-3 col--xl-3">
+					<p class="contacts__subtitle">АДРЕС</p>
+					<p class="contacts__text">г. Минск, ул. Короля,<br>д.88, пом. 610.</p>
+				</div>
+				<div class="col col--xs-12 col--sm-12 col--md-6 col--lg-3 col--xl-3">
+					<p class="contacts__subtitle">ВРЕМЯ РАБОТЫ</p>
+					<p class="contacts__text">Понедельник — Пятница</p>
+					<p class="contacts__text">с 10 до 18</p>
+				</div>
+				<div class="col col--xs-12 col--sm-12 col--md-6 col--lg-3 col--xl-3">
+					<p class="contacts__subtitle">ПОЧТА</p>
+					<a href="mailto:info@gpu.by" class="contacts__link contacts__email">info@gpu.by</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- /Contacts -->
+
+
+
+		<!-- Map -->
+
+		<div class="grid" id="map"></div>
+
+		<!-- /Map -->
+
+
+
+		<!-- Form -->
+
+		<div class="grid grid--container block">
+			<div class="row">
+				<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+					<h2 class="block__title">ОБРАТНАЯ СВЯЗЬ</h2>
+					<h3 class="block__subtitle">НАПИШИТЕ НАМ, И МЫ ОТВЕТИМ</h3>
+				</div>
+			</div>
+			<form class="form contacts-form" id="contact_form" action="">
+				<div class="row">
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-3 col--xl-3">
+						<div class="fieldset">
+							<input class="form__form-input input__validation" id='name' name='name' type='text' placeholder="Дмитрий Прокопенко">
+							<label class="form__form-label" for='name'>ВВЕДИТЕ ВАШЕ ИМЯ</label>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<input class="form__form-input input__validation" id='tel' name='tel' type='text' placeholder="+ 375 (29) 000 00 00">
+							<label class="form__form-label" for='tel'>ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-3 col--xl-3">
+						<div class="fieldset">
+							<input class="form__form-input input__validation" id='email' name='email' type='email' placeholder="contact@mail.com">
+							<label class="form__form-label" for='email'>ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+						</div>
+					</div>
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-10 col--xl-10">
+						<div class="fieldset fluid">
+							<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
+							<label class="form__form-label" for='message'>ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+						</div>
+					</div>
+					<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- /Form -->
+
+
+
+		<!-- Footer -->
+
+		//= templates/footer.html
+
+		<!-- /Footer -->
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVXUsua909tndWHyivUa75vCgw5lYXzhA"></script>
+		<script type="text/javascript">
+			//Google Map Initialization
+			google.maps.event.addDomListener(window, 'load', init);
+			var map;
+			function init() {
+			    var mapOptions = {
+			        center: new google.maps.LatLng(53.904701, 27.528196),
+			        zoom: 17,
+			        zoomControl: true,
+			        zoomControlOptions: {
+			            style: google.maps.ZoomControlStyle.DEFAULT,
+			        },
+			        disableDoubleClickZoom: true,
+			        mapTypeControl: true,
+			        mapTypeControlOptions: {
+			            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+			        },
+			        scaleControl: true,
+			        scrollwheel: false,
+			        panControl: true,
+			        streetViewControl: true,
+			        draggable : true,
+			        overviewMapControl: true,
+			        overviewMapControlOptions: {
+			            opened: false,
+			        },
+			        mapTypeId: google.maps.MapTypeId.ROADMAP,
+			        styles: [
+				  	{
+				    "featureType": "water",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "color": "#d3d3d3" }
+				    ]
+				  	},{
+				    "featureType": "transit",
+				    "stylers": [
+				      { "color": "#808080" },
+				      { "visibility": "off" }
+				    ]
+				  },{
+				    "featureType": "road.highway",
+				    "elementType": "geometry.stroke",
+				    "stylers": [
+				      { "visibility": "on" },
+				      { "color": "#b3b3b3" }
+				    ]
+				  },{
+				    "featureType": "road.highway",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "color": "#ffffff" }
+				    ]
+				  },{
+				    "featureType": "road.local",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "visibility": "on" },
+				      { "color": "#ffffff" },
+				      { "weight": 1.8 }
+				    ]
+				  },{
+				    "featureType": "road.local",
+				    "elementType": "geometry.stroke",
+				    "stylers": [
+				      { "color": "#d7d7d7" }
+				    ]
+				  },{
+				    "featureType": "poi",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "visibility": "on" },
+				      { "color": "#ebebeb" }
+				    ]
+				  },{
+				    "featureType": "administrative",
+				    "elementType": "geometry",
+				    "stylers": [
+				      { "color": "#a7a7a7" }
+				    ]
+				  },{
+				    "featureType": "road.arterial",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "color": "#ffffff" }
+				    ]
+				  },{
+				    "featureType": "road.arterial",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "color": "#ffffff" }
+				    ]
+				  },{
+				    "featureType": "landscape",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "visibility": "on" },
+				      { "color": "#efefef" }
+				    ]
+				  },{
+				    "featureType": "road",
+				    "elementType": "labels.text.fill",
+				    "stylers": [
+				      { "color": "#696969" }
+				    ]
+				  },{
+				    "featureType": "administrative",
+				    "elementType": "labels.text.fill",
+				    "stylers": [
+				      { "visibility": "on" },
+				      { "color": "#737373" }
+				    ]
+				  },{
+				    "featureType": "poi",
+				    "elementType": "labels.icon",
+				    "stylers": [
+				      { "visibility": "off" }
+				    ]
+				  },{
+				    "featureType": "poi",
+				    "elementType": "labels",
+				    "stylers": [
+				      { "visibility": "off" }
+				    ]
+				  },{
+				    "featureType": "road.arterial",
+				    "elementType": "geometry.stroke",
+				    "stylers": [
+				      { "color": "#d6d6d6" }
+				    ]
+				  },{
+				    "featureType": "road",
+				    "elementType": "labels.icon",
+				    "stylers": [
+				      { "visibility": "off" }
+				    ]
+				  },{
+				  },{
+				    "featureType": "poi",
+				    "elementType": "geometry.fill",
+				    "stylers": [
+				      { "color": "#dadada" }
+				    ]
+				  }
+				],
+			    }
+			    var mapElement = document.getElementById('map');
+			    var map = new google.maps.Map(mapElement, mapOptions);
+				var locations = [
+					['Улица Короля 88', 'undefined', 'undefined', 'undefined', 'undefined', 53.904701, 27.528196, 'img/placeholder.png']
+				];
+
+			    for (i = 0; i < locations.length; i++) {
+					if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+					if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+					if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+			       	if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+			        if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+			        marker = new google.maps.Marker({
+			            icon: markericon,
+			            position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+			            map: map,
+			            title: locations[i][0],
+			            desc: description,
+			            tel: telephone,
+			            email: email,
+			            web: web
+			        });
+					link = '';     
+				}
+			}
+		</script>
+
+	</body>
+</html>

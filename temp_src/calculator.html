@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>GPU</title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta name="description" content="">
+
+		<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	</head>
+	<body>
+
+		<!-- Header -->
+
+		<header class="header services">
+
+			<!-- Navigation panel -->
+			//= templates/navigation.html
+			<!-- /Navigation panel -->
+
+			<div class="breadcrumbs">
+				<a href="index.html" class="breadcrumbs__item">ГЛАВНАЯ</a>
+				<div class="breadcrumbs__line"></div>
+				<a href="services.html" class="breadcrumbs__item">УСЛУГИ</a>
+				<div class="breadcrumbs__line"></div>
+				<a href="calculator.html" class="breadcrumbs__item active">КАЛЬКУЛЯТОР</a>
+			</div>
+
+			<h1 class="header__title">КАЛЬКУЛЯТОР УСЛУГ</h1>
+			<div class="vertical-line"></div>
+
+		</header>
+
+		<!-- /Header -->
+
+		<!-- Calculator -->
+		
+		<div class="grid grid--container block">
+			<div class="row">
+				<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+					<h3 class="block__title">НАШИ УСЛУГИ</h3>
+					<h2 class="block__subtitle"><strong>УСУЛГИ, КОТОРЫЕ МЫ ПРЕДОСТАВЛЯЕМ</strong></h2>
+					<p class="calculator__descr">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</p>
+				</div>
+			</div>
+			<form class="calculator">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<label class="label" for="kind-of-activity">ВИД ДЕЯТЕЛЬНОСТИ</label>
+							<select id="kind-of-activity" class="select" placeholder="Выберите вид деятельности">
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+							</select>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<label class="label" for="amount-of-points">КОЛИЧЕСТВО ТОЧЕК</label>
+							<input id="amount-of-points" class="input" type="text" name="" placeholder="Введите число точек">
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<label class="label" for="amount-of-employees">КОЛИЧЕСТВО СОТРУДНИКОВ</label>
+							<input id="amount-of-employees" class="input" type="text" name="" placeholder="Введите число сотрудников">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<label class="label" for="system-of-taxation">СИСТЕМА НАЛОГООБЛОЖЕНИЯ</label>
+							<select id="system-of-taxation" class="select">
+								<option value="" selected>1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+							</select>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-8 col--xl-8">
+						<div class="fieldset">
+							<label class="label" for="amout-of-documentation">КОЛИЧЕСТВО ПЕРВИЧНОЙ ДОКУМЕНТАЦИИ В МЕСЯЦ</label>
+							<select id="amout-of-documentation" class="select">
+								<option value="" selected>1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
+						<div class="fieldset">
+							<label class="label" for="estimated-revenue">ОРИЕНТИРОВОЧНАЯ ВЫРУЧКА</label>
+							<select id="estimated-revenue" class="select">
+								<option value="" selected>1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+							</select>
+						</div>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-8 col--xl-8">
+						<div class="fieldset">
+							<label class="label" for="foreign-economic-activity">НАЛИЧИЕ ВНЕШНЕЭКОНОМИЧЕСКОЙ ДЕЯТЕЛЬНОСТИ</label>
+							<input id="foreign-economic-activity" type="checkbox" name="">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- /Calculator -->
+
+	</body>
+</html>
