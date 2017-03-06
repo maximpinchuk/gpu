@@ -43,3 +43,25 @@ $('#subscribe_form').submit(function(e) {
         return false;
     }
 });
+
+
+
+// Subscribe Form
+$('#free-audit_form').submit(function(e) {
+    e.preventDefault();
+    if ($('#name').hasClass('valid') && $('#tel').hasClass('valid') && $('#email').hasClass('valid')) {
+        $.ajax({
+            type: 'POST',
+            url: '../form_subscribe.php',
+            data: $(this).serialize()
+        }).done(function() {
+            alert('Данные успешно отправлены');
+            $('#subscribe_form').trigger('reset');
+        }).fail(function(jqXHR, textStatus) {
+            alert('Ошибка при отправке сообщения: ' + textStatus);
+        });
+    } else {
+        $('#name').addClass('error') && $('#tel').addClass('error') && $('#email').addClass('error');
+        return false;
+    }
+});

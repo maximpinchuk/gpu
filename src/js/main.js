@@ -150,198 +150,41 @@ $(document).ready(function() {
 
 
 	// Service menu fadeIn and fadeOut
-	// $('.nav-panel__navigation__item__link').hover(
-
-	// 	function() {
-	// 		if( $(this).hasClass('services') ) {
-	// 			setTimeout(function() {
-	// 				$('.services-menu').fadeIn(300);
-	// 				$('.nav-panel__navigation__item__link.services').addClass('opened');
-	// 				$('.services-menu__bg').fadeIn(100);
-
-	// 				// Придание фоновым элементам размитые (класс blur) и правильное поведение элементов навиации
-	// 				// при открытии меню с услугами
-	// 				$('.header-consultation').addClass('blur');
-	// 				$('.swiper-container.header-slider .swiper-pagination').addClass('blur');
-	// 				$('.slide-loader').addClass('blur');
-	// 				$('.slide-down__link').addClass('blur');
-	// 				$('.nav-panel__navigation__item__link').addClass('blur');
-	// 				$('.nav-panel__navigation__item__link').addClass('transparent');
-	// 				$('.nav-panel__navigation__item__link.services').removeClass('blur');
-	// 				$('.nav-panel__navigation__item__link.services').removeClass('transparent');
-	// 				$('.nav-panel__logo').addClass('blur');
-	// 			}, 1000);
-			
-	// 		} else {
-	// 			setTimeout(function() {
-	// 				$('.services-menu').fadeOut(300);
-	// 				$('.nav-panel__navigation__item__link.services').removeClass('opened');
-	// 				$('.services-menu__bg').fadeOut(100);
-
-	// 				// Удаление размитыя у фоновых элементов (класс blur) и правильное поведение элементов навиации
-	// 				// при открытии меню с услугами
-	// 				$('.header-consultation').removeClass('blur');
-	// 				$('.swiper-container.header-slider .swiper-pagination').removeClass('blur');
-	// 				$('.slide-loader').removeClass('blur');
-	// 				$('.slide-down__link').removeClass('blur');
-	// 				$('.nav-panel__navigation__item__link').removeClass('blur');
-	// 				$('.nav-panel__navigation__item__link').removeClass('transparent');
-	// 				$('.nav-panel__logo').removeClass('blur');
-	// 			}, 1000);
-	// 		} 
-	// 	},
-
-	// 	function() {
-	// 		setTimeout(function() {
-	// 			$('.services-menu').fadeOut(300);
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('opened');
-	// 			$('.services-menu__bg').fadeOut(100);
-
-	// 			// Удаление размитыя у фоновых элементов (класс blur) и правильное поведение элементов навиации
-	// 			// при открытии меню с услугами
-	// 			$('.header-consultation').removeClass('blur');
-	// 			$('.swiper-container.header-slider .swiper-pagination').removeClass('blur');
-	// 			$('.slide-loader').removeClass('blur');
-	// 			$('.slide-down__link').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link').removeClass('transparent');
-	// 			$('.nav-panel__logo').removeClass('blur');
-	// 		}, 500);
-	// 	}
-
-	// );
-
-	// var intervalID;
-	// $('.nav-panel__navigation__item__link.services').hover(
-	// 	function() {
-	// 		intervalID = setTimeout(function() {
-	// 			$('.services-menu').fadeIn(300);
-	// 			$('.nav-panel__navigation__item__link.services').addClass('opened');
-	// 			$('.services-menu__bg').fadeIn(100);
-
-	// 			// Придание фоновым элементам размитые (класс blur) и правильное поведение элементов навиации
-	// 			// при открытии меню с услугами
-	// 			$('.header-consultation').addClass('blur');
-	// 			$('.swiper-container.header-slider .swiper-pagination').addClass('blur');
-	// 			$('.slide-loader').addClass('blur');
-	// 			$('.slide-down__link').addClass('blur');
-	// 			$('.nav-panel__navigation__item__link').addClass('blur');
-	// 			$('.nav-panel__navigation__item__link').addClass('transparent');
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('transparent');
-	// 			$('.nav-panel__logo').addClass('blur');
-	// 		}, 500);
-	// 	}, function() {
-	// 		clearInterval(intervalID);
-	// 		setTimeout(function() {
-	// 			$('.services-menu').fadeOut(300);
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('opened');
-	// 			$('.services-menu__bg').fadeOut(100);
-
-	// 			// Удаление размитыя у фоновых элементов (класс blur) и правильное поведение элементов навиации
-	// 			// при открытии меню с услугами
-	// 			$('.header-consultation').removeClass('blur');
-	// 			$('.swiper-container.header-slider .swiper-pagination').removeClass('blur');
-	// 			$('.slide-loader').removeClass('blur');
-	// 			$('.slide-down__link').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link').removeClass('transparent');
-	// 			$('.nav-panel__logo').removeClass('blur');
-	// 		}, 500);
-	// 	}
-	// );
-	// $('.services-menu').hover(
-	// 	function() {
-	// 		intervalID = setTimeout(function() {
-	// 			$('.services-menu').fadeIn(300);
-	// 			$('.nav-panel__navigation__item__link.services').addClass('opened');
-	// 			$('.services-menu__bg').fadeIn(300);
-
-	// 			// Придание фоновым элементам размитые (класс blur) и правильное поведение элементов навиации
-	// 			// при открытии меню с услугами
-	// 			$('.header-consultation').addClass('blur');
-	// 			$('.swiper-container.header-slider .swiper-pagination').addClass('blur');
-	// 			$('.slide-loader').addClass('blur');
-	// 			$('.slide-down__link').addClass('blur');
-	// 			$('.nav-panel__navigation__item__link').addClass('blur');
-	// 			$('.nav-panel__navigation__item__link').addClass('transparent');
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('transparent');
-	// 			$('.nav-panel__logo').addClass('blur');
-	// 		}, 500);
-	// 	}, function() {
-	// 		clearInterval(intervalID);
-	// 		setTimeout(function() {
-	// 			$('.services-menu').fadeOut(300);
-	// 			$('.nav-panel__navigation__item__link.services').removeClass('opened');
-	// 			$('.services-menu__bg').fadeOut(100);
-
-	// 			// Удаление размитыя у фоновых элементов (класс blur) и правильное поведение элементов навиации
-	// 			// при открытии меню с услугами
-	// 			$('.header-consultation').removeClass('blur');
-	// 			$('.swiper-container.header-slider .swiper-pagination').removeClass('blur');
-	// 			$('.slide-loader').removeClass('blur');
-	// 			$('.slide-down__link').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link').removeClass('blur');
-	// 			$('.nav-panel__navigation__item__link').removeClass('transparent');
-	// 			$('.nav-panel__logo').removeClass('blur');
-	// 		}, 500);
-	// 	}
-	// );
-
-
-
-
-	$('.nav-panel__navigation__item__link').mouseenter(function() {
-
-		if( $(this).hasClass('services') ) {
-			$('.services-menu').fadeIn(300);
-			$('.nav-panel__navigation__item__link.services').addClass('opened');
-			$('.services-menu__bg').fadeIn(100);
-
-			// Придание фоновым элементам размитые (класс blur) и правильное поведение элементов навиации
-			// при открытии меню с услугами
-			$('.header-consultation').addClass('blur');
-			$('.swiper-container.header-slider .swiper-pagination').addClass('blur');
-			$('.slide-loader').addClass('blur');
-			$('.slide-down__link').addClass('blur');
-			$('.nav-panel__navigation__item__link').addClass('blur');
-			$('.nav-panel__navigation__item__link').addClass('transparent');
-			$('.nav-panel__navigation__item__link.services').removeClass('blur');
-			$('.nav-panel__navigation__item__link.services').removeClass('transparent');
-			$('.nav-panel__logo').addClass('blur');
-			
-		} else {
-			$('.services-menu').fadeOut(300);
-			$('.nav-panel__navigation__item__link.services').removeClass('opened');
-			$('.services-menu__bg').fadeOut(100);
-
-			// Удаление размитыя у фоновых элементов (класс blur) и правильное поведение элементов навиации
-			// при открытии меню с услугами
-			$('.header-consultation').removeClass('blur');
-			$('.swiper-container.header-slider .swiper-pagination').removeClass('blur');
-			$('.slide-loader').removeClass('blur');
-			$('.slide-down__link').removeClass('blur');
-			$('.nav-panel__navigation__item__link').removeClass('blur');
-			$('.nav-panel__navigation__item__link').removeClass('transparent');
-			$('.nav-panel__logo').removeClass('blur');
-		} 
-	});
-	$('.services-menu').mouseleave(function() {
-		$('.services-menu').fadeOut(300);
-		$('.nav-panel__navigation__item__link.services').removeClass('opened');
-		$('.services-menu__bg').fadeOut(100);
-
-		// Удаление размитыя у фоновых элементов (класс blur) и правильное поведение элементов навиации
-		// при открытии меню с услугами
-		$('.header-consultation').removeClass('blur');
-		$('.swiper-container.header-slider .swiper-pagination').removeClass('blur');
-		$('.slide-loader').removeClass('blur');
-		$('.slide-down__link').removeClass('blur');
-		$('.nav-panel__navigation__item__link').removeClass('blur');
-		$('.nav-panel__navigation__item__link').removeClass('transparent');
-		$('.nav-panel__logo').removeClass('blur');
-	});
+	var intervalId;
+	$('.nav-panel.default .nav-panel__navigation .nav-panel__navigation__item.services').hover(
+		function() {
+			intervalId = setTimeout(function() {
+				$('.nav-panel.default .services-menu').fadeIn(300);
+				$('.nav-panel.default .nav-panel__navigation .nav-panel__navigation__item.services').addClass('opened');
+				$('.services-menu__bg').fadeIn(100);
+			}, 700);
+		},
+		function() {
+			setTimeout(function() {
+				$('.nav-panel.default .services-menu').fadeOut(300);
+				$('.nav-panel.default .nav-panel__navigation .nav-panel__navigation__item.services').removeClass('opened');
+				$('.services-menu__bg').fadeOut(100);
+			}, 300);
+			clearInterval(intervalId);
+		}
+	);
+	$('.nav-panel.fixed .nav-panel__navigation .nav-panel__navigation__item.services').hover(
+		function() {
+			intervalId = setTimeout(function() {
+				$('.nav-panel.fixed .services-menu').fadeIn(300);
+				$('.nav-panel.fixed .nav-panel__navigation .nav-panel__navigation__item.services').addClass('opened');
+				$('.services-menu__bg').fadeIn(100);
+			}, 700);
+		},
+		function() {
+			setTimeout(function() {
+				$('.nav-panel.fixed .services-menu').fadeOut(300);
+				$('.nav-panel.fixed .nav-panel__navigation .nav-panel__navigation__item.services').removeClass('opened');
+				$('.services-menu__bg').fadeOut(100);
+			}, 300);
+			clearInterval(intervalId);
+		}
+	);
 
 
 
@@ -360,15 +203,43 @@ $(document).ready(function() {
 	$(window).scroll(function(event) {
 		var st = $(this).scrollTop();
 		if (st > lastScrollTop) {
-			$('.nav-panel.fixed').removeClass('open');
+			$('.nav-panel.fixed').removeClass('is-open');
 		} else {
-			$('.nav-panel.fixed').addClass('open');
+			$('.nav-panel.fixed').addClass('is-open');
 			if (st < 300) {
-				$('.nav-panel.fixed').removeClass('open');
+				$('.nav-panel.fixed').removeClass('is-open');
 			}
 		}
 		lastScrollTop = st;
 	});
+
+	// Menu appearance on scrollTop
+	// var lastScrollTop = 0;
+	// $(window).scroll(function(event) {
+	// 	var st = $(this).scrollTop();
+	// 	if ( st > 0 ) {
+	// 		if (st > lastScrollTop) {
+	// 			$('.nav-panel').addClass('fixed');
+	// 			$('.nav-panel.fixed').addClass('is-hidden');
+	// 			$('.nav-panel.fixed').removeClass('is-open');
+	// 			$('.nav-panel.fixed').addClass('is-transitioning');
+	// 			setTimeout(function() {
+	// 				$('.nav-panel.fixed').removeClass('is-transitioning');
+	// 			}, 500);
+	// 		} else {
+	// 			$('.nav-panel.fixed').removeClass('is-hidden');
+	// 			$('.nav-panel.fixed').addClass('is-open');
+	// 			$('.nav-panel.fixed').addClass('is-transitioning');
+	// 			setTimeout(function() {
+	// 				$('.nav-panel.fixed').removeClass('is-transitioning');
+	// 			}, 500);
+	// 		}
+	// 	} else {
+	// 		// $('.nav-panel').removeClass('open');
+	// 		$('.nav-panel').removeClass('fixed');
+	// 	}
+	// 	lastScrollTop = st;
+	// });
 
 
 

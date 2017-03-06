@@ -32,6 +32,7 @@
 @import "components/advanteges";
 @import "components/stoke-block";
 @import "components/cooperation";
+@import "components/popup";
 
 // pages
 @import "pages/home";
@@ -51,18 +52,35 @@
 // vendors-extensions
 @import "vendors-extensions/swiper";
 @import "vendors-extensions/animate";
+@import "vendors-extensions/remodal-default-theme";
 
 
 // Some extra classes
-.blur {
-	filter: blur(1px);
-}
-.transparent {
-	opacity: 0.4;
-}
+// .blur {
+// 	filter: blur(1px);
+// }
+// .transparent {
+// 	opacity: 0.4;
+// }
 
 .col {
 	@include respond-to(extrasmall) {
 		padding: 0;
 	}
+}
+
+body {
+	// &.blur {
+	// 	&:before {
+	// 		content: '';
+	// 		position: fixed;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		background: rgba(0, 0, 0, 0.3);
+	// 		filter: blur(2px);
+	// 		z-index: 6;
+	// 	}
+	// }
 }

@@ -46,7 +46,7 @@
 /* Default theme styles of the wrapper */
 
 .remodal-wrapper {
-	padding: 10px 10px 0;
+	// padding: 10px 10px 0;
 }
 
 /* Default theme styles of the modal dialog */
@@ -54,7 +54,7 @@
 .remodal {
 	box-sizing: border-box;
 	width: 100%;
-	margin-bottom: 10px;
+	height: 100%;
 	padding: 35px;
 
 	-webkit-transform: translate3d(0, 0, 0);
@@ -62,6 +62,8 @@
 
 	color: #2b2e38;
 	background: #fff;
+
+	overflow: auto;
 }
 
 .remodal.remodal-is-opening,
@@ -92,10 +94,9 @@
 /* Close button */
 
 .remodal-close {
-	position: absolute;
+	position: fixed;
 	top: 0;
-	left: 0;
-
+	
 	display: block;
 	overflow: visible;
 
@@ -125,7 +126,7 @@
 	font-size: 25px;
 	line-height: 35px;
 
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 
@@ -337,11 +338,11 @@
 /* Media queries
 	 ========================================================================== */
 
-@media only screen and (min-width: 641px) {
-	.remodal {
-		max-width: 700px;
-	}
-}
+// @media only screen and (min-width: 641px) {
+// 	.remodal {
+// 		max-width: 700px;
+// 	}
+// }
 
 /* IE8
 	 ========================================================================== */
@@ -351,5 +352,5 @@
 }
 
 .lt-ie9 .remodal {
-	width: 700px;
+	width: 100%;
 }

@@ -1,0 +1,50 @@
+// Extensions for remodal-default-theme.scss
+
+
+
+/* Close button */
+
+.remodal {
+
+	@include respond-to(extrasmall) {
+		padding: 30px 0;
+	}
+	@include respond-to(small) {
+		padding: 30px 0;
+	}
+}
+
+.remodal-close {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+
+	display: block;
+	overflow: visible;
+
+	width: 35px;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+
+	&:hover {
+		.remodal-close__icon {
+			transform: rotate(90deg);
+		}		
+	}
+}
+
+.remodal-close:before {
+	content: '';
+}
+
+.remodal-close__icon {
+	width: 20px;
+	height: 20px;
+	fill: $text-primary-color;
+	transition: transform 0.5s;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
