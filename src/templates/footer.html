@@ -37,7 +37,7 @@
 					<div class="flex--container">
 						<ul class="footer-top__list">
 							<li class="footer-top__list__item">
-								<a href="services/buhgalterskoe-obsluzhivanie.html" class="footer-top__list__item__link">Бухгалтерское сопровождение</a>
+								<a href="/services/buhgalterskoe-obsluzhivanie.html" class="footer-top__list__item__link">Бухгалтерское сопровождение</a>
 							</li>
 							<li class="footer-top__list__item">
 								<a href="/services/kadrovyj-uchet.html" class="footer-top__list__item__link">Кадровый учет</a>
@@ -71,7 +71,7 @@
 
 				<div class="col col--xs-12 col--sm-12 col--md-3 col--lg-3 col--xl-3">
 					<h3 class="footer-top__title">НОВОСТНАЯ РАССЫЛКА</h3>
-					<form action="" class="form footer-form" id="subscribe_form">
+					<form class="form footer-form" id="subscribe_form">
 						<div class="fieldset">
 							<input class="footer-form__input input__validation" type="email" id="email" name="email" placeholder="Введите email-адрес">
 							<span class="input__underline"></span>
@@ -91,6 +91,8 @@
 					</form>
 					<a href="tel:+375173605051" class="footer-tel">8 (017) 360 50 51</a>
 					<a href="tel:+375296863797" class="footer-tel">8 (029) 686 37 97</a>
+					<a href="#" data-remodal-target="success">Success</a>
+					<a href="#" data-remodal-target="error">Error</a>
 				</div>
 			</div>
 		</div>
@@ -132,10 +134,10 @@
 
 
 
-<!-- Consultation popup -->
+<!-- Free Audit popup -->
 
 <div class="remodal-bg">
-	<div class="remodal" data-remodal-id="consultation">
+	<div class="remodal" data-remodal-id="free-audit">
 		<div data-remodal-action="close" class="remodal-close">
 			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
 				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
@@ -151,25 +153,25 @@
 						<p class="remodal__subtitle">ОТПРАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ АУДИТ</p>
 					</div>
 				</div>
-				<form id="free-audit_form" action="" class="remodal__form form">
+				<form id="free-audit_form" class="remodal__form form">
 					<div class="row">
 						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
 						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
 							<div class="fieldset">
-								<input class="form__form-input input__validation" id='name' name='name' type='text' placeholder="Дмитрий Прокопенко">
-								<label class="form__form-label" for='name'>ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<input class="form__form-input input__validation" id="name" name="name" type="text" placeholder="Дмитрий Прокопенко">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
 							</div>
 						</div>
 						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
 							<div class="fieldset">
-								<input class="form__form-input input__validation" id='name' name='name' type='text' placeholder="Дмитрий Прокопенко">
-								<label class="form__form-label" for='name'>ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<input class="form__form-input input__validation" id="tel" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
 							</div>
 						</div>
 						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
 							<div class="fieldset">
-								<input class="form__form-input input__validation" id='name' name='name' type='text' placeholder="Дмитрий Прокопенко">
-								<label class="form__form-label" for='name'>ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<input class="form__form-input input__validation" id="email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
 							</div>
 						</div>
 						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
@@ -179,7 +181,7 @@
 						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
 							<div class="fieldset fluid">
 								<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
-								<label class="form__form-label" for='message'>ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
 							</div>
 						</div>
 						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
@@ -191,7 +193,7 @@
 					</div>
 					<div class="row">
 						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
-							<a href="#" class="remodal__privacy-policy">Политика конфиденциальности</a>
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
 						</div>
 					</div>
 				</form>	
@@ -200,7 +202,356 @@
 	</div>
 </div>
 
-<!-- /Consultation popup -->
+<!-- /Free Audit popup -->
+
+
+
+<!-- Free Consultation popup -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="free-consultation">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">ОТПРАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</p>
+					</div>
+				</div>
+				<form id="free-consultation_form" class="remodal__form form">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="name" name="name" type="text" placeholder="Дмитрий Прокопенко">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="tel" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Free Consultation popup -->
+
+
+
+<!-- Quastion popup -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="quastion-form">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАДАТЬ ВОПРОС</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">ЗАДАЙТЕ НАМ ВОПРОС И МЫ НА НЕГО ОТВЕТИМ</p>
+					</div>
+				</div>
+				<form id="free-consultation_form" class="remodal__form form">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="name" name="name" type="text" placeholder="Дмитрий Прокопенко">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="tel" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Quastion popup -->
+
+
+
+<!-- Bonus popup -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="bonus-form">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ПОЛУЧИТЬ БОНУС</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">ЗАПОЛНИТЕ ФОРМУ И ПОЛУЧИТЕ БОНУС</p>
+					</div>
+				</div>
+				<form id="bonus_form" class="remodal__form form">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="name" name="name" type="text" placeholder="Дмитрий Прокопенко">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="tel" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Bonus popup -->
+
+
+
+<!-- Cooperation popup -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="cooperation-form">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">СОТРУДНИЧАТЬ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">ЗАПОЛНИТЕ ФОРМУ И МЫ С ВАМИ СВЯЖЕМСЯ</p>
+					</div>
+				</div>
+				<form id="cooperation_form" class="remodal__form form">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="name" name="name" type="text" placeholder="Дмитрий Прокопенко">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="tel" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation" id="email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" id="message" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Cooperation popup -->
+
+
+
+<!-- Success popup -->
+
+<div class="remodal-bg">
+	<div class="remodal success__popup" data-remodal-id="success">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+  		<p class="success__title">ЗАЯВКА УСПЕШНО ОТПРАВЛЕНА</p>
+  		<p class="success__subtitle">Мы свяжемся с вами в ближайшее время</p>
+  		<svg class="success__icon" width="100px" height="100px" viewBox="0 0 52 52">
+  			<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+  			<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+  		</svg>
+	</div>
+</div>
+
+<!-- /Success popup -->
+
+
+
+<!-- Error popup -->
+
+<div class="remodal-bg">
+	<div class="remodal error__popup" data-remodal-id="error">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+  		<p class="error__title">ПРОИЗОШЛА ОШИБКА ПРИ ОТПРАВКЕ ДАННЫХ</p>
+  		<p class="error__subtitle">Error</p>
+		<svg class="error__icon" width="100px" height="100px" viewBox="0 0 52 52">
+  			<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+  			<!-- <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/> -->
+  		</svg>
+	</div>
+</div>
+
+<!-- /Error popup -->
+
+
+
+<!-- Privacy Policy -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="privacy-policy">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+  		<p class="error__title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</p>
+	</div>
+</div>
+
+<!-- /Privacy Policy -->
 
 
 

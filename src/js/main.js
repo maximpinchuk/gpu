@@ -301,6 +301,16 @@ $(document).ready(function() {
 
 
 
+	// Success popup variables
+	var successPopUp = $('[data-remodal-id=success]').remodal(),
+		errorPopUp = $('[data-remodal-id=error]').remodal(),
+		freeAuditPopUp = $('[data-remodal-id=free-audit]').remodal(),
+		freeConsultationPopUp = $('[data-remodal-id=free-consultation]').remodal(),
+		bonusPopUp = $('[data-remodal-id=bonus-form]').remodal(),
+		cooperationPopUp = $('[data-remodal-id=cooperation-form]').remodal();
+
+
+
 	// Calculator tooltip
 	$('.tooltip__icon').mouseenter(function() {
 		setTimeout(function() {

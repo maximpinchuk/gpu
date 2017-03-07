@@ -233,12 +233,12 @@
 
 @-webkit-keyframes remodal-opening-keyframes {
 	from {
-		transform: translateY(50%);
+		transform: translateX(-50%);
 
 		opacity: 0;
 	}
 	to {
-		transform: translateY(0);
+		transform: translateX(0);
 
 		opacity: 1;
 
@@ -249,12 +249,12 @@
 
 @keyframes remodal-opening-keyframes {
 	from {
-		transform: translateY(50%);
+		transform: translateX(-50%);
 
 		opacity: 0;
 	}
 	to {
-		transform: translateY(0);
+		transform: translateX(0);
 
 		opacity: 1;
 
@@ -262,6 +262,38 @@
 		filter: blur(0);
 	}
 }
+
+// @-webkit-keyframes remodal-opening-keyframes {
+// 	from {
+// 		transform: translateY(50%);
+
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateY(0);
+
+// 		opacity: 1;
+
+// 		-webkit-filter: blur(0);
+// 		filter: blur(0);
+// 	}
+// }
+
+// @keyframes remodal-opening-keyframes {
+// 	from {
+// 		transform: translateY(50%);
+
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateY(0);
+
+// 		opacity: 1;
+
+// 		-webkit-filter: blur(0);
+// 		filter: blur(0);
+// 	}
+// }
 
 @-webkit-keyframes remodal-closing-keyframes {
 	from {

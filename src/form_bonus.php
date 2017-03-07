@@ -9,12 +9,12 @@ $phone = trim($_POST["tel"]);
 $email = trim($_POST["email"]);
 $msg = trim($_POST["msg"]);
 $body = "
-	<b>Имя:</b> $name\n
-	<b>Телефон:</b> $phone\n
-	<b>E-mail:</b> $email\n
-	<b>Сообщение:</b> $msg
+	<b>Имя</b>: $name\n
+	<b>Телефон</b>: $phone\n
+	<b>E-mail</b>: $email\n
+	<b>Сообщение</b>: $msg
 ";
 
-$pagetitle = "Обратная связь \"$sitename\"";
+$pagetitle = "Требование бонуса \"$sitename\"";
 mail($recepient, $pagetitle, $body, $headers);
 ?>
