@@ -19,15 +19,9 @@ var calc = {
 		EstimatedRevenueCoefficient: [1, 1.1, 1.2, 1.3, 1.4],
 		VedCoefficient: 1.2
 	},
-	// taxSystem: function() {
-	// 	var b = document.getElementById('system-of-taxation').value;
-	// 	if ()	
-	// },
 	calc: function() {
-
-		// Определение вида деятельности
 		var kindOfActivity = document.getElementById('kind-of-activity').value,
-			kindOfActivityPrice;
+				kindOfActivityPrice;
 
 		// Определения системы налообложения
 		var systemOfTaxation = document.getElementById('system-of-taxation').value;
@@ -108,6 +102,8 @@ var calc = {
 			amountOfDocumentationPrice = this.data.DocumentationPrice[4];
 		} else if ( amountOfDocumentation === 'interval-6' ) {
 			amountOfDocumentationPrice = this.data.DocumentationPrice[5];
+		} else {
+			amountOfDocumentationPrice = 0;
 		}
 
 		// Предварительная финальная стоимость
@@ -127,8 +123,12 @@ var calc = {
 			estimatedRevenuePrice = this.data.EstimatedRevenueCoefficient[3];
 		} else if ( estimatedRevenue === 'revenue-interval-5' ) {
 			estimatedRevenuePrice = this.data.EstimatedRevenueCoefficient[4];
+		} else {
+			estimatedRevenuePrice = 1;
 		}
 
+		// Стоимость после умножения на коэффициент 
+		// за предполагаемую выручку
 		total = total * estimatedRevenuePrice;
 
 		// Определения наличия внешнеэкономической деятельности
@@ -137,14 +137,22 @@ var calc = {
 			total = total * this.data.VedCoefficient;
 		}
 
+		// Разбиение финальной стоимости на разряды и 
+		// ограничение количества символов после точки до двух
 		total = total.toFixed(2);
 		total = total.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 
-		// Result output
-		document.getElementById('price').innerHTML = total;
+		// Проверка финальной стоимости на NaN и ее вывод
+		if ( isNaN(total) == true ) {
+			document.getElementById('price').innerHTML = '0';
+		} else {
+			document.getElementById('price').innerHTML = total;
+		}
+		
 	}
-};
+}
 
+// Событие калькулятора
 var btn = document.getElementById('calc__btn');
 btn.onclick = function(e) {
 	e.preventDefault();

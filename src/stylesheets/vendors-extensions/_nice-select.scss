@@ -1,0 +1,24 @@
+// Custom select
+
+
+
+.nice-select {
+	width: 100%;
+	font-family: 'ElliotRegular', sans-serif;
+	font-size: 1rem;
+	color: $text-third-color;
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	border-radius: 0;
+}
+
+.nice-select .list {
+	width: 100%;
+	border-radius: 0;
+}
+
+.nice-select:after {
+	right: 20px;
+	border-bottom: 1px solid $text-third-color;
+	border-right: 1px solid $text-third-color;
+}

@@ -13,7 +13,9 @@
 
 		<!-- Header -->
 
-		<header class="header services">
+		<header class="header" data-parallax="scroll" data-image-src="img/bg-outsourcing.jpg">
+
+			<div class="parallax-bg"></div>
 
 			<!-- Navigation panel -->
 
@@ -50,7 +52,16 @@
 				<div class="row">
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
 						<div class="fieldset">
-							<select id="kind-of-activity" class="custom-select" placeholder="Выберите вид деятельности">
+							<!-- <select id="kind-of-activity" class="custom-select" placeholder="Выберите вид деятельности">
+								<option value="vid1">Оптовая торговля</option>
+								<option value="vid2">Розничная торговля</option>
+								<option value="vid3">Бытовые услуги</option>
+								<option value="vid4">Услуги без использования материалов</option>
+								<option value="vid5">Производство</option>
+								<option value="vid6">Многопрофильное мероприятие</option>
+							</select> -->
+							<select id="kind-of-activity">
+								<option data-display="Выберите вид деятельности">Выберите вид деятельности</option>
 								<option value="vid1">Оптовая торговля</option>
 								<option value="vid2">Розничная торговля</option>
 								<option value="vid3">Бытовые услуги</option>
@@ -63,7 +74,8 @@
 					</div>
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
 						<div class="fieldset">
-							<select id="system-of-taxation" class="custom-select" name="sources" placeholder="Выберите систему налогообложения">
+							<select id="system-of-taxation">
+								<option data-display="Выберите систему налогообложения">Выберите систему налогообложения</option>
 								<option value="osn">ОСН</option>
 								<option value="usn">УСН</option>
 								<option value="usn-nds">УСН с НДС</option>
@@ -89,7 +101,8 @@
 					</div>
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-8 col--xl-8">
 						<div class="fieldset">
-							<select id="amount-of-documentation" class="custom-select" placeholder="Выберите число первичной документации">
+							<select id="amount-of-documentation">
+								<option data-display="Выберите число первичной документации">Выберите число первичной документации</option>
 								<option value="interval-1">1 - 10</option>
 								<option value="interval-2">11 - 20</option>
 								<option value="interval-3">21 - 30</option>
@@ -119,12 +132,13 @@
 				<div class="row">
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-4 col--xl-4">
 						<div class="fieldset">
-							<select id="estimated-revenue" class="custom-select" placeholder="Выберите ориентировочную выручку">
-								<option value="revenue-interval-1">до 2 000</option>
-								<option value="revenue-interval-2">2 000 - 10 000</option>
-								<option value="revenue-interval-3">10 000 - 50 000</option>
-								<option value="revenue-interval-4">50 000 - 100 000</option>
-								<option value="revenue-interval-5">Более 100 000</option>
+							<select id="estimated-revenue">
+								<option data-display="Выберите ориентировочную выручку">Выберите ориентировочную выручку</option>
+								<option value="revenue-interval-1">до 2 000 <span>РУБЛЕЙ</span></option>
+								<option value="revenue-interval-2">2 000 - 10 000 РУБЛЕЙ</option>
+								<option value="revenue-interval-3">10 000 - 50 000 РУБЛЕЙ</option>
+								<option value="revenue-interval-4">50 000 - 100 000 РУБЛЕЙ</option>
+								<option value="revenue-interval-5">Более 100 000 РУБЛЕЙ</option>
 							</select>
 							<label class="label" for="estimated-revenue">ОРИЕНТИРОВОЧНАЯ ВЫРУЧКА</label>
 						</div>

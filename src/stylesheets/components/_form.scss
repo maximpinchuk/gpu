@@ -1,0 +1,158 @@
+// Forms styles
+
+
+
+.form {
+	padding: 40px 0 0 0;
+
+	.fieldset {
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		flex-direction: column-reverse;
+		width: 100%;
+		max-width: 270px;
+		margin: 0 auto 60px auto;
+
+		@include respond-to(extrasmall) {
+			max-width: 100%;
+			margin: 0 auto 40px auto;
+		}
+		@include respond-to(small) {
+			max-width: 100%;
+			margin: 0 auto 40px auto;
+		}
+
+		&.fluid {
+			max-width: 100%;
+		}
+	}
+
+	.input__underline {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: $text-third-color;
+		transition: width 0.5s;
+	}
+
+	.form__form-label {
+		display: block;
+		text-align: left;
+		padding: 0 0 0 18px;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 0.8125rem;
+		color: $text-primary-color;
+
+		&.error {
+			color: $error;
+		}
+
+		&.valid {
+			color: $success;
+		}
+	}
+
+	.form__form-input {
+		box-sizing: border-box;
+		padding: 11px 0 11px 18px;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1rem;
+		line-height: 1.33;
+		border: none;
+		border-bottom: 1px solid #cacaca;
+
+		&:focus {
+			outline: none;
+			// border-bottom: 1px solid $text-third-color;
+		}
+
+		&:focus ~ span {
+			width: 100% !important;
+		}
+
+		&:active {
+			color: $text-primary-color;
+			outline: none;
+			// border-bottom: 1px solid $text-third-color;
+		}
+
+		&.error {
+			border-bottom: 1px solid $error;
+		}
+
+		&.valid {
+			border-bottom: 1px solid $success;
+		}
+
+	}
+
+	.form__form-textarea {
+		box-sizing: border-box;
+		min-height: 100px;
+		margin: 0;
+		padding: 11px 0 11px 18px;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1rem;
+		border: none;
+		border-bottom: 1px solid #cacaca;
+		resize: none;
+
+		@include respond-to(extrasmall) {
+			width: 100%;
+		}
+
+		@include respond-to(small) {
+			width: 100%;
+		}
+
+		&:focus {
+			outline: none;
+			// border-bottom: 1px solid $text-third-color;
+		}
+
+		&:focus ~ span {
+			width: 100% !important;
+		}
+
+		&:active {
+			color: $text-primary-color;
+			outline: none;
+			// border-bottom: 1px solid $text-third-color;
+		}
+
+	}
+
+	.form__btn {
+		@include btn($text-third-color, $btn-border-color-light);
+		background: transparent;
+		margin: -10px 0 0 0;
+
+		&:focus {
+			outline: none;
+		}
+
+	}
+
+}
+
+input:focus + label {
+	color: $text-third-color !important;
+}
+input.error + label {
+	color: $error !important;
+}
+input.valid + label {
+	color: $success !important;
+}
+textarea:focus + label {
+	color: $text-third-color !important;
+}
+textarea.error + label {
+	color: $error !important;
+}
+textarea.valid + label {
+	color: $success !important;
+}

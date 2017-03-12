@@ -13,10 +13,12 @@
 
 	@include respond-to(extrasmall) {
 		text-align: center;
+		padding: 0 15px;
 	}
 
 	@include respond-to(small) {
 		text-align: center;
+		padding: 0 15px;
 	}
 
 	.quote {
@@ -27,6 +29,14 @@
 	    height: 46px;
 	    fill: #f5f5f5;
 	    z-index: -1;
+
+	    @include respond-to(extrasmall) {
+			display: none;
+		}
+
+		@include respond-to(small) {
+			display: none;
+		}
 	}
 
 }
@@ -41,14 +51,24 @@
 
 	@include respond-to(extrasmall) {
 		text-align: center;
+		padding: 0 15px;
 	}
 
 	@include respond-to(small) {
 		text-align: center;
+		padding: 0 15px;
 	}
 
 	&:nth-child(1) {
 		padding: 23px 0 25px 0;
+
+		@include respond-to(extrasmall) {
+			padding: 23px 15px 25px 15px;
+		}
+
+		@include respond-to(small) {
+			padding: 23px 15px 25px 15px;
+		}
 	}
 
 	&:nth-child(2) {
@@ -147,12 +167,14 @@
 
 // Links to other pages
 .card {
-	margin: 33px 0 110px 0;
+	margin: 0;
 	padding: 30px 40px 40px 40px;
 	background: $service-card-bg;
+	text-align: left;
 
 	@include respond-to(extrasmall) {
 		margin: 30px 0;
+		padding: 20px;
 	}
 
 	&__title {

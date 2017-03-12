@@ -1,6 +1,6 @@
 // Footer styles
 .footer-top {
-	padding: 97px 0 70px 0;
+	padding: 70px 0;
 	background: $footer-top-bg;
 
 	@include respond-to(extrasmall) {
@@ -77,47 +77,56 @@
 	margin: 23px 0 0 0;
 	padding: 0 !important;
 
-	.input__underline {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		height: 1px;
-		background: $text-third-color;
-		transition: width 0.5s;
-	}
-
-	&__input {
+	&__fieldset {
 		position: relative;
-		margin: 0;
-		padding: 0 0 12px 0;
+		display: flex;
+		flex-direction: column-reverse;
 		width: 100%;
-		font-family: 'ElliotRegular', sans-serif;
-		font-size: 0.875rem;
-		color: $text-third-color;
-		background: transparent;
-		border: none;
-		border-bottom: 1px solid $grey-light;
+		margin: 0;
 
-		&:active {
-			outline: none;
+		.input__underline {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background: $text-third-color;
+			transition: width 0.5s;
 		}
 
-		&:focus {
-			outline: none;
-		}
-
-		&:focus + span {
+		&__input {
+			position: relative;
+			margin: 0;
+			padding: 0 0 12px 0;
 			width: 100%;
+			font-family: 'ElliotRegular', sans-serif;
+			font-size: 0.875rem;
+			color: $text-third-color;
+			background: transparent;
+			border: none;
+			border-bottom: 1px solid $grey-light;
+
+			&:active {
+				outline: none;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&:focus + span {
+				width: 100%;
+			}
+
+			&.error {
+				border-bottom: 1px solid $error;
+			}
+
+			&.valid {
+				border-bottom: 1px solid $success;
+			}
 		}
 
-		&.error {
-			border-bottom: 1px solid $error;
-		}
-
-		&.valid {
-			border-bottom: 1px solid $success;
-		}
 	}
 
 	&__btn {
@@ -176,6 +185,7 @@
 			}
 		}
 	}
+
 }
 
 .footer-tel {
