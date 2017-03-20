@@ -54,9 +54,30 @@
 		color: $white;
 		border: 1px solid $accent-color;
 
+		@include respond-to(extrasmall) {
+			color: $text-color;
+			border: 1px solid $border-color;
+		}
+
+		@include respond-to(small) {
+			color: $text-color;
+			border: 1px solid $border-color;
+		}
+
 		span {
 			width: 270%;
 			height: 270%;
+
+			@include respond-to(extrasmall) {
+				width: 0;
+				height: 0;
+			}
+
+			@include respond-to(small) {
+				width: 0;
+				height: 0;
+			}
+
 		}
 
 	}

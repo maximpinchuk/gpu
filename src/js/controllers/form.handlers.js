@@ -2,6 +2,10 @@
 
 
 
+// Phone mask
+$("#tel").mask("+375 (99) 999 99 99");
+
+
 // Success popup text function
 function successPopUpText(text) {
 	$('.success__popup .success__subtitle').text(text);
@@ -23,7 +27,7 @@ $('#contact_form').submit(function(e) {
 	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
 		$.ajax({
 			type: 'POST',
-			url: '../form_contacts.php',
+			url: '../php/form_contacts.php',
 			data: $(this).serialize()
 		}).done(function() {
 			successPopUp.open();
@@ -55,7 +59,7 @@ $('#subscribe_form').submit(function(e) {
 	if (emailField.hasClass('valid')) {
 		$.ajax({
 			type: 'POST',
-			url: '../form_subscribe.php',
+			url: '../php/form_subscribe.php',
 			data: $(this).serialize()
 		}).done(function() {
 			successPopUp.open();
@@ -89,7 +93,7 @@ $('#free-audit_form').submit(function(e) {
 	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
 		$.ajax({
 			type: 'POST',
-			url: '../form_free-audit.php',
+			url: '../php/form_free-audit.php',
 			data: $(this).serialize()
 		}).done(function() {
 			freeAuditPopUp.close();
@@ -122,7 +126,7 @@ $('#free-consultation_form').submit(function(e) {
 	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
 		$.ajax({
 			type: 'POST',
-			url: '../form_free-consultation.php',
+			url: '../php/form_free-consultation.php',
 			data: $(this).serialize()
 		}).done(function() {
 			freeConsultationPopUp.close();
@@ -155,7 +159,7 @@ $('#bonus_form').submit(function(e) {
 	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
 		$.ajax({
 			type: 'POST',
-			url: '../form_bonus.php',
+			url: '../php/form_bonus.php',
 			data: $(this).serialize()
 		}).done(function() {
 			bonusPopUp.close();
@@ -188,7 +192,7 @@ $('#cooperation_form').submit(function(e) {
 	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
 		$.ajax({
 			type: 'POST',
-			url: '../form_cooperation.php',
+			url: '../php/form_cooperation.php',
 			data: $(this).serialize()
 		}).done(function() {
 			bonusPopUp.close();

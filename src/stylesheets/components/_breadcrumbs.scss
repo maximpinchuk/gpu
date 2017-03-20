@@ -16,6 +16,10 @@
 		opacity: 0.5;
 		transition: opacity 0.3s;
 
+		@include respond-to(extrasmall) {
+			font-size: 0.6875rem;
+		}
+
 		&:after {
 			content: '';
 			position: absolute;

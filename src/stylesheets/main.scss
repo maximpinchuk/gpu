@@ -34,6 +34,7 @@
 @import "components/cooperation";
 @import "components/popup";
 @import "components/form";
+@import "components/cards-link";
 
 // pages
 @import "pages/home";
@@ -60,31 +61,43 @@
 
 
 // Some extra classes
-// .blur {
-// 	filter: blur(1px);
-// }
-// .transparent {
-// 	opacity: 0.4;
-// }
-
 .col {
 	@include respond-to(extrasmall) {
 		padding: 0;
 	}
 }
 
-body {
-	// &.blur {
-	// 	&:before {
-	// 		content: '';
-	// 		position: fixed;
-	// 		top: 0;
-	// 		left: 0;
-	// 		width: 100%;
-	// 		height: 100%;
-	// 		background: rgba(0, 0, 0, 0.3);
-	// 		filter: blur(2px);
-	// 		z-index: 6;
-	// 	}
-	// }
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	.header {
+		height: 768px;
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.header {
+		height: 1024px;
+	}
+}
+/* iphone5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+	.header {
+		height: 320px;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+	.header {
+		height: 568px;
+	}
+}
+/* iPhone 4 */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+	.header {
+		height: 320px;
+	}
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+	.header {
+		height: 480px;
+	}
 }

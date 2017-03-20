@@ -9,10 +9,15 @@ $phone = trim($_POST["tel"]);
 $email = trim($_POST["email"]);
 $msg = trim($_POST["msg"]);
 $body = "
-	Имя: $name\n
-	Телефон: $phone\n
-	E-mail: $email\n
-	Сообщение: $msg
+	<h2 style="font-family: 'Arial', sans-serif; font-size: 24px;">Данные клиента</h2>
+	</br>
+	<b>Имя:</b> $name
+	</br>
+	<b>Телефон:</b> $phone
+	</br>
+	<b>E-mail:</b> $email
+	</br>
+	<b>Сообщение:</b> $msg
 ";
 
 $pagetitle = "Бесплатный аудит \"$sitename\"";

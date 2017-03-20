@@ -105,7 +105,6 @@ $(document).ready(function() {
 		paginationClickable: true,
 		loop: true,
 		autoHeight: true,
-		simulateTouch: false,
 		breakpoints: {
 			992: {
 				paginationBulletRender: function (swiper, index, className) {
@@ -114,7 +113,7 @@ $(document).ready(function() {
 			}
 		},
 		paginationBulletRender: function (swiper, index, className) {
-			var tabsName = ['Apple', 'Elem2', 'БГЭУ', 'Intel'];
+			var tabsName = ['Компонент-Телеком', 'Бабушкина и К', 'Дакан Сервис', 'Спэйсд Диджитал'];
 			if ( index === (tabsName.length - 1) ) {
 				return  '<span class="' +className + '">'
 						+ tabsName[index] + '</span>'
@@ -137,6 +136,11 @@ $(document).ready(function() {
 
 
 
+	// Custom select plugin init
+	$('select').niceSelect();
+
+
+
 	// Adaptive menu
 	$('.nav-panel__navigation-icon').click(function() {
 		$(this).toggleClass('opened');
@@ -155,6 +159,7 @@ $(document).ready(function() {
 		function() {
 			intervalId = setTimeout(function() {
 				$('.nav-panel.default .services-menu').fadeIn(300);
+				$('.nav-panel.default .services-menu').addClass('opened');
 				$('.nav-panel.default .nav-panel__navigation .nav-panel__navigation__item.services').addClass('opened');
 				$('.services-menu__bg').fadeIn(100);
 			}, 300);
@@ -162,6 +167,7 @@ $(document).ready(function() {
 		function() {
 			setTimeout(function() {
 				$('.nav-panel.default .services-menu').fadeOut(300);
+				$('.nav-panel.default .services-menu').removeClass('opened');
 				$('.nav-panel.default .nav-panel__navigation .nav-panel__navigation__item.services').removeClass('opened');
 				$('.services-menu__bg').fadeOut(100);
 			}, 100);
@@ -172,6 +178,7 @@ $(document).ready(function() {
 		function() {
 			intervalId = setTimeout(function() {
 				$('.nav-panel.fixed .services-menu').fadeIn(300);
+				$('.nav-panel.fixed .services-menu').addClass('opened');
 				$('.nav-panel.fixed .nav-panel__navigation .nav-panel__navigation__item.services').addClass('opened');
 				$('.services-menu__bg').fadeIn(100);
 			}, 300);
@@ -179,6 +186,7 @@ $(document).ready(function() {
 		function() {
 			setTimeout(function() {
 				$('.nav-panel.fixed .services-menu').fadeOut(300);
+				$('.nav-panel.fixed .services-menu').removeClass('opened');
 				$('.nav-panel.fixed .nav-panel__navigation .nav-panel__navigation__item.services').removeClass('opened');
 				$('.services-menu__bg').fadeOut(100);
 			}, 100);
@@ -204,60 +212,42 @@ $(document).ready(function() {
 		var st = $(this).scrollTop();
 		if (st > lastScrollTop) {
 			$('.nav-panel.fixed').removeClass('is-open');
+			if ( $('.nav-panel.fixed .services-menu').hasClass('opened') ) {
+				$('.nav-panel.fixed .services-menu').fadeOut(300);
+				$('.services-menu__bg').fadeOut(100);
+			}
 		} else {
 			$('.nav-panel.fixed').addClass('is-open');
 			if (st < 300) {
 				$('.nav-panel.fixed').removeClass('is-open');
+				if ( $('.nav-panel.fixed .services-menu').hasClass('opened') ) {
+					$('.nav-panel.fixed .services-menu').fadeOut(300);
+					$('.services-menu__bg').fadeOut(100);
+				}
 			}
 		}
 		lastScrollTop = st;
 	});
 
-	// Menu appearance on scrollTop
-	// var lastScrollTop = 0;
-	// $(window).scroll(function(event) {
-	// 	var st = $(this).scrollTop();
-	// 	if ( st > 0 ) {
-	// 		if (st > lastScrollTop) {
-	// 			$('.nav-panel').addClass('fixed');
-	// 			$('.nav-panel.fixed').addClass('is-hidden');
-	// 			$('.nav-panel.fixed').removeClass('is-open');
-	// 			$('.nav-panel.fixed').addClass('is-transitioning');
-	// 			setTimeout(function() {
-	// 				$('.nav-panel.fixed').removeClass('is-transitioning');
-	// 			}, 500);
-	// 		} else {
-	// 			$('.nav-panel.fixed').removeClass('is-hidden');
-	// 			$('.nav-panel.fixed').addClass('is-open');
-	// 			$('.nav-panel.fixed').addClass('is-transitioning');
-	// 			setTimeout(function() {
-	// 				$('.nav-panel.fixed').removeClass('is-transitioning');
-	// 			}, 500);
-	// 		}
-	// 	} else {
-	// 		// $('.nav-panel').removeClass('open');
-	// 		$('.nav-panel').removeClass('fixed');
-	// 	}
-	// 	lastScrollTop = st;
-	// });
-
 
 
 	// Buttons hover effect
-	$(function() {  
-	  $('.btn-js')
-	    .on('mouseenter', function(e) {
-				var parentOffset = $(this).offset(),
-	      		relX = e.pageX - parentOffset.left,
-	      		relY = e.pageY - parentOffset.top;
-				$(this).find('span').css({top:relY, left:relX})
-	    })
-	    .on('mouseout', function(e) {
-				var parentOffset = $(this).offset(),
-	      		relX = e.pageX - parentOffset.left,
-	      		relY = e.pageY - parentOffset.top;
-	    	$(this).find('span').css({top:relY, left:relX})
-	    });
+	$(function() {
+		if ($(document).width() > 992) {
+		  	$('.btn-js')
+		    .on('mouseenter', function(e) {
+					var parentOffset = $(this).offset(),
+		      		relX = e.pageX - parentOffset.left,
+		      		relY = e.pageY - parentOffset.top;
+					$(this).find('span').css({top:relY, left:relX})
+		    })
+		    .on('mouseout', function(e) {
+					var parentOffset = $(this).offset(),
+		      		relX = e.pageX - parentOffset.left,
+		      		relY = e.pageY - parentOffset.top;
+		    	$(this).find('span').css({top:relY, left:relX})
+		    });
+	    }
 	});
 
 
@@ -266,11 +256,6 @@ $(document).ready(function() {
 	$('.header').parallax({
 		speed: 0.1
 	});
-
-
-
-	// Custom select plugin init
-	$('select').niceSelect();
 
 
 
@@ -285,25 +270,14 @@ $(document).ready(function() {
 
 
 	// Calculator tooltip
-	$('.tooltip__icon').mouseenter(function() {
-		setTimeout(function() {
-			$('.tooltip__block').fadeIn(300);
-		}, 200);
+	$('.tooltip__icon').click(function() {
+		$('.tooltip__block').toggleClass('opened');
 	});
-	$('.tooltip__icon').mouseleave(function() {
-		setTimeout(function() {
-			$('.tooltip__block').fadeOut(300);
-		}, 200);
-	});
-
-
-
-	// Phone mask
-	$("#tel").mask("+375 (99) 999 99 99");
 
 
 
 	//= controllers/form.handlers.js
 	//= controllers/validation.js
-	//= controllers/calc.js
 });
+
+//= controllers/calc.js

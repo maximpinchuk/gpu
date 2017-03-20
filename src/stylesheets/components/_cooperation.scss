@@ -12,6 +12,10 @@
 		color: $text-third-color;
 		line-height: 1.33;
 		letter-spacing: 1px;
+
+		@include respond-to(extrasmall) {
+			font-size: 1.6875rem;
+		}
 	}
 
 	&__subtitle {

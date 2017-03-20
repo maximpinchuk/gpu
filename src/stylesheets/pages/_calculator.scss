@@ -12,6 +12,7 @@
 
 	@include respond-to(extrasmall) {
 		padding: 0 0 25px 0;
+		font-size: 1.125rem;
 	}
 
 	@include respond-to(small) {

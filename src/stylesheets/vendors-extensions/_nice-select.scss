@@ -10,6 +10,10 @@
 	border: none;
 	border-bottom: 1px solid #cacaca;
 	border-radius: 0;
+
+	@include respond-to(extrasmall) {
+		font-size: 0.875rem;
+	}
 }
 
 .nice-select .list {

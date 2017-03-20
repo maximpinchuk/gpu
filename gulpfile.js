@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     browserSync = require("browser-sync"),
     rimraf = require('rimraf'),
+    rename = require('gulp-rename'),
     reload = browserSync.reload;
 
 var path = {
@@ -18,7 +19,7 @@ var path = {
         style: 'build/stylesheets/',
         img: 'build/img/',
         fonts: 'build/fonts/',
-        php: 'build/'
+        php: 'build/php/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/**/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -26,7 +27,7 @@ var path = {
         style: 'src/stylesheets/**/*.scss',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*',
-        php: 'src/*.php'
+        php: 'src/php/*.php'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
@@ -34,7 +35,7 @@ var path = {
         style: 'src/stylesheets/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        php: 'src/*.php'
+        php: 'src/php/*.php'
     },
     clean: './build'
 };
@@ -66,6 +67,7 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
         .pipe(uglify()) //Сожмем наш js
+        .pipe(rename({suffix: ".min"})) //Добавим суффикс .min
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });

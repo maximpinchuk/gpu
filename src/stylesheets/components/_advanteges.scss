@@ -12,6 +12,11 @@
 	color: $text-third-color;
 	line-height: (27/20);
 	text-align: center;
+
+	@include respond-to(extrasmall) {
+		padding: 0 15px;
+		font-size: 1.125rem;
+	}
 }
 
 .aboutus__descr {
@@ -76,6 +81,10 @@
 .aboutus-cards__block {
 	margin: 15px 0 13px 0;
 	justify-content: space-between;
+
+	@include respond-to(extrasmall) {
+		margin: 0;	
+	}
 }
 
 .aboutus-card__icon {
@@ -84,6 +93,10 @@
 	height: 40px;
 	margin: auto;
 	fill: $accent-color;
+
+	@include respond-to(extrasmall) {
+		margin: 40px auto 0 auto;
+	}
 
 	.st0 {
 		fill: $accent-color;
