@@ -24,6 +24,6 @@ $body = "
 	</html>
 ";
 
-$pagetitle = "Предложение о сотрудничестве \"$sitename\"";
+$pagetitle = "Заказ услуги Регистрация юридических лиц \"$sitename\"";
 mail($recepient, $pagetitle, $body, $headers);
 ?>

@@ -22,9 +22,9 @@
 		margin: 20px 0 50px 0;
 		padding: 0 110px;
 		font-family: 'ElliotRegular', sans-serif;
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		color: $text-third-color;
-		line-height: 1.33;
+		line-height: (25/18);
 
 		@include respond-to(extrasmall) {
 			padding: 0 15px;

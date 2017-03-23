@@ -254,7 +254,7 @@ $(document).ready(function() {
 
 	// Parallax init
 	$('.header').parallax({
-		speed: 0.1
+		speed: 0.02
 	});
 
 

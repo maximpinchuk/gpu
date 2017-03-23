@@ -6,11 +6,11 @@
 	display: block;
 	max-width: 810px;
 	margin: 0 auto;
-	padding: 20px 0 25px 0;
+	padding: 20px 0 40px 0;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	color: $text-third-color;
-	line-height: (27/20);
+	line-height: 1.33;
 	text-align: center;
 
 	@include respond-to(extrasmall) {
@@ -25,9 +25,9 @@
 	margin: 0 auto;
 	padding: 0 0 52px 0;
 	font-family: 'ElliotRegular', sans-serif;
-	font-size: 1.125rem;
+	font-size: 1.0625rem;
 	color: $text-primary-color;
-	line-height: (24/18);
+	line-height: (24/17);
 	text-align: center;
 }
 
@@ -39,8 +39,12 @@
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 0.9375rem;
 	color: $accent-color;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	transition: 0.5s;
+
+	@include respond-to(extrasmall) {
+		margin: 0 0 30px 0;
+	}
 
 	&:hover {
 		.icon {
@@ -113,7 +117,7 @@
 
 .aboutus-card__descr {
 	margin: 0;
-	padding: 0 40px;
+	padding: 0 30px;
 	font-family: 'ElliotRegular', sans-serif;
 	font-size: 1.0625rem;
 	color: $text-primary-color;

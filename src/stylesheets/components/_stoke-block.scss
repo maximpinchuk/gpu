@@ -43,9 +43,22 @@
 		display: flex;
 	}
 
+	&__descr {
+		display: block;
+		max-width: 810px;
+		margin: 0 auto;
+		padding: 20px 0 40px 0;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1.0625rem;
+		color: $text-primary-color;
+		line-height: (24/17);
+		text-align: center;
+	}
+
 	&__btn {
-		@include btn($text-third-color, $btn-border-color-light);
-		background: transparent;
+		@include btn($accent-color, $accent-color);
+		color: $white;
+		background: $accent-color;
 	    display: block;
     	margin: auto;
 

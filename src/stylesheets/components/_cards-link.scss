@@ -39,9 +39,11 @@
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 0.9375rem;
 		color: $text-third-color;
-		letter-spacing: 1px;
+		letter-spacing: 1.5px;
+		transition: color 0.3s;
 
 		&:hover {
+
 			.arrow {
 				right: -8px;
 
@@ -58,7 +60,7 @@
 		    right: 0;
 			width: 22px;
 			fill: $text-third-color;
-			transition: right 0.3s;
+			transition: right 0.3s, color 0.3s;
 
 			.st1 {
 				width: 14px;

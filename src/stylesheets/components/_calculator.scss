@@ -165,8 +165,9 @@ input[disabled] + label {
 .calc__price__count {
 	margin: 10px 0;
 	font-family: 'ElliotBold', sans-serif;
-	font-size: 1.3125rem;
+	font-size: 1.125rem;
 	color: $accent-color;
+	text-transform: uppercase;
 
 	span {
 		font-size: 2rem;

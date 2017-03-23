@@ -34,12 +34,12 @@
                     }
 
                     &.second {
-                        background: url('../img/banners/bg-home-1.jpg') no-repeat;
+                        background: url('../img/banners/bg-services-reg-ur-lic.jpg') no-repeat;
                         background-size: cover;
                     }
 
                     &.third {
-                        background: url('../img/banners/bg-home-1.jpg') no-repeat;
+                        background: url('../img/banners/bg-services-nalog-otchet.jpg') no-repeat;
                         background-size: cover;
                     } 
                 }
@@ -106,25 +106,6 @@
 
                     &:after {
                         opacity: 1;
-                    }
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        bottom: -5px;
-                        left: 0;
-                        width: 0;
-                        height: 1px;
-                        opacity: 1;
-                        background: $accent-color;
-                        z-index: 3;
-                        transition: width 0.2s;
-                    }
-
-                    &:hover {
-                        &:before {
-                            width: 96%;
-                        }
                     }
                 }
 
@@ -247,6 +228,7 @@
                 opacity: 1;
                 text-align: center;
                 cursor: pointer;
+                letter-spacing: 1px;
 
                 @include respond-to(large) {
                     width: 262px;

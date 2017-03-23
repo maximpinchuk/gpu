@@ -3,13 +3,13 @@
 
 
 .faq-list {
-	margin: 0 0 35px 0;
+	margin: 18px 0 35px 0;
 	padding: 0 0 0 15px;
 	list-style: none;
 	text-align: left;
 
 	&__item {
-		padding: 6px 15px 6px 0;
+		padding: 11px 15px 11px 0;
 		font-family: 'ElliotBold', sans-serif;
 		font-family: 1.5rem;
 		color: $accent-color;
@@ -110,7 +110,7 @@
 		display: inline-block;
 		margin: 0 7px;
 		padding: 16px 25px;
-		font-family: 'ElliotBold', sans-serif;
+		font-family: 'ElliotRegular', sans-serif;
 		font-size: 0.9375rem;
 		color: $accent-color;
 		letter-spacing: 1px;

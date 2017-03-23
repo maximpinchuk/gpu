@@ -35,7 +35,7 @@
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 0.875rem;
 		color: $accent-color;
-		letter-spacing: 5px;
+		letter-spacing: 4px;
 		padding: 0;
 		margin: 0;
 		text-align: center;
@@ -74,7 +74,7 @@
 		}
 
 		@include respond-to(small) {
-			line-height: (82/30);
+			line-height: 1.33;
 			padding: 0 15px;
 		}
 

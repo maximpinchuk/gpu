@@ -1,0 +1,23 @@
+// Price block styles
+
+
+
+.price-block__text {
+	margin: 5px 0 37px 0;
+	font-family: 'ElliotBold', sans-serif;
+	font-size: 1.5rem;
+	color: $accent-color;
+
+	span {
+		font-size: 2.25rem;
+	}
+}
+
+.price-block__btn {
+	@include btn($text-third-color, $btn-border-color-light);
+	background: transparent;
+
+	&:focus {
+		outline: none;
+	}
+}

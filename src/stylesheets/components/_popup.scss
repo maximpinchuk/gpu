@@ -35,6 +35,10 @@
 	color: $text-third-color;
 	line-height: (26/30);
 	letter-spacing: 1px;
+
+	@include respond-to(extrasmall) {
+		line-height: 1.33;
+	}
 }
 
 .remodal__privacy-policy {

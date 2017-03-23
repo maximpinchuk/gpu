@@ -24,6 +24,6 @@ $body = "
 	</html>
 ";
 
-$pagetitle = "Предложение о сотрудничестве \"$sitename\"";
+$pagetitle = "Вопрос \"$sitename\"";
 mail($recepient, $pagetitle, $body, $headers);
 ?>

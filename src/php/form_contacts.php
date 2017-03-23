@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "maximpinchuk1995@gmail.com";
+$recepient = "info@gpu.by";
 $sitename = "GPU";
 $headers = "Content-type: text/html; charset=\"utf-8\"\n From: $recepient";
 $pagetitle = "Обратная связь \"$sitename\"";
@@ -10,15 +10,19 @@ $phone = trim($_POST["tel"]);
 $email = trim($_POST["email"]);
 $msg = trim($_POST["msg"]);
 $body = "
-	<h4>Тема:</h4> $pagetitle
-	<br>
-	<b>Имя:</b> $name
-	<br>
-	<b>Телефон:</b> $phone
-	<br>
-	<b>E-mail:</b> $email
-	<br>
-	<b>Сообщение:</b> $msg
+	<html>
+		<body> 
+			<h3>Данные лида</h3>
+			</br>
+			<p><b>Имя:</b> $name</p>
+			</br>
+			<p><b>Телефон:</b> $phone</p>
+			</br>
+			<p><b>Email:</b> $email</p>
+			</br>
+			<p><b>Сообщение</b> $msg</p>
+		</body> 
+	</html>
 ";
 
 mail($recepient, $pagetitle, $body, $headers);

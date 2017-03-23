@@ -34,7 +34,7 @@
 		left: 0;
 		width: 0;
 		height: 1px;
-		background: $text-third-color;
+		background: $accent-color;
 		transition: width 0.5s;
 	}
 
@@ -46,12 +46,23 @@
 		font-size: 0.8125rem;
 		color: $text-primary-color;
 
-		&.error {
-			color: $error;
-		}
-
 		&.valid {
 			color: $success;
+		}
+	}
+
+	.form__error-label {
+		display: none;
+		position: absolute;
+		bottom: -20px;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 0.75rem;
+		color: $text-third-color;
+		margin: 0;
+		text-align: left;
+
+		&.email-footer {
+			bottom: -12px;
 		}
 	}
 
@@ -79,9 +90,9 @@
 			// border-bottom: 1px solid $text-third-color;
 		}
 
-		&.error {
-			border-bottom: 1px solid $error;
-		}
+		// &.error {
+		// 	border-bottom: 1px solid $error;
+		// }
 
 		&.valid {
 			border-bottom: 1px solid $success;
@@ -141,18 +152,18 @@
 input:focus + label {
 	color: $text-third-color !important;
 }
-input.error + label {
-	color: $error !important;
-}
+// input.error + label {
+// 	color: $error !important;
+// }
 input.valid + label {
 	color: $success !important;
 }
 textarea:focus + label {
 	color: $text-third-color !important;
 }
-textarea.error + label {
-	color: $error !important;
-}
+// textarea.error + label {
+// 	color: $error !important;
+// }
 textarea.valid + label {
 	color: $success !important;
 }
