@@ -40,13 +40,13 @@
 
 	span {
 		position: absolute;
+		top: 0;
+		left: 0;
 		display: block;
 		width: 0;
-		height: 0;
-		border-radius: 50%;
+		height: 100%;
 		background: $accent-color;
-		transform: translate(-50%, -50%);
-		transition: width 0.5s, height 0.5s;
+		transition: width 0.4s;
 		z-index: -1;
 	}
 
@@ -65,8 +65,7 @@
 		}
 
 		span {
-			width: 270%;
-			height: 270%;
+			width: 100%;
 
 			@include respond-to(extrasmall) {
 				width: 0;

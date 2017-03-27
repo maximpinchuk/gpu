@@ -90,10 +90,11 @@
 		font-size: 0.875rem;
 		color: $accent-color;
 		text-align: center;
+		text-transform: uppercase;
 	}
 
 	&__block__subtitle {
-		margin: 20px 0 30px 0;
+		margin: 20px 0 20px 0;
 		font-family: 'ElliotBold', sans-serif;
 		font-size: 1.875rem;
 		color: $text-third-color;
@@ -109,7 +110,7 @@
 		display: block;
 		max-width: 760px;
 		margin: 0 auto;
-		padding: 5px 0 40px 0;
+		padding: 3px 0 35px 0;
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 1.0625rem;
 		color: $text-primary-color;
@@ -118,13 +119,20 @@
 	}
 
 	&__stoke-block__btn {
-		@include btn($text-third-color, $btn-border-color-light);
-		background: transparent;
+		@include btn($accent-color, $accent-color);
+		background: $accent-color;
+		color: $white;
 	    display: block;
     	margin: auto;
+    	transition: all 0.4s;
 
 		&:focus {
 			outline: none;
+		}
+
+		&:hover {
+			border: 1px solid #9b0003;
+			background: #9b0003;
 		}
 	}
 

@@ -528,7 +528,7 @@
 <!-- Order popup (reg ur lic) -->
 
 <div class="remodal-bg">
-	<div class="remodal" data-remodal-id="zakaz-form">
+	<div class="remodal" data-remodal-id="zakaz-form-ur-lico">
 		<div data-remodal-action="close" class="remodal-close">
 			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
 				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
@@ -538,13 +538,14 @@
 			<div class="grid grid--container">
 				<div class="row">
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
-						<h3 class="remodal__title">ЗАКАЗАТЬ РЕГИСТРАЦИЮ ЮРИДИЧЕСКИХ ЛИЦ</h3>
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
 					</div>
 					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
-						<p class="remodal__subtitle">ЗАПОЛНИТЕ ФОРМУ И МЫ С ВАМИ СВЯЖЕМСЯ</p>
+						<p class="remodal__subtitle">РЕГИСТРАЦИЯ ЮРИДИЧЕСКОГО ЛИЦА</p>
 					</div>
 				</div>
-				<form id="zakaz_form" class="remodal__form form">
+				<form id="zakaz_form__ur-lico" class="remodal__form form">
+					<input type="hidden" name="service" value="Регистрация юридического лица">
 					<div class="row">
 						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
 						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
@@ -601,6 +602,486 @@
 </div>
 
 <!-- /Order popup (reg ur lic) -->
+
+
+
+<!-- Order popup (vosst uchet) -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="zakaz-form-vosst-uchet">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">ВОССТАНОВЛЕНИЕ УЧЕТА</p>
+					</div>
+				</div>
+				<form id="zakaz_form__vosst-uchet" class="remodal__form form">
+					<input type="hidden" name="service" value="Восстановление учета">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation name" name="name" type="text" placeholder="Иванов Василий">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label name">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation tel" id="tel-zakaz" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label tel">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label email">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<span class="input__underline"></span>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order popup (vosst uchet) -->
+
+
+
+<!-- Order popup (likv pred) -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="zakaz-form-likv-pred">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">ЛИКВИДАЦИЯ ПРЕДПРИЯТИЯ</p>
+					</div>
+				</div>
+				<form id="zakaz_form__likv-pred" class="remodal__form form">
+					<input type="hidden" name="service" value="Ликвидация предприятия">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation name" name="name" type="text" placeholder="Иванов Василий">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label name">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation tel" id="tel-zakaz" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label tel">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label email">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<span class="input__underline"></span>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order popup (likv pred) -->
+
+
+
+<!-- Order popup (buh kons) -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="zakaz-form-buh-kons">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">БУХГАЛТЕРСКАЯ КОНСУЛЬТАЦИЯ</p>
+					</div>
+				</div>
+				<form id="zakaz_form__buh-kons" class="remodal__form form">
+					<input type="hidden" name="service" value="Бухгалтерская консультация">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation name" name="name" type="text" placeholder="Иванов Василий">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label name">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation tel" id="tel-zakaz" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label tel">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label email">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<span class="input__underline"></span>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order popup (buh kons) -->
+
+
+
+<!-- Order popup (buh kons) -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="zakaz-form-kadr-uchet">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">КАДРОВЫЙ УЧЕТ</p>
+					</div>
+				</div>
+				<form id="zakaz_form__kadr-uchet" class="remodal__form form">
+					<input type="hidden" name="service" value="Кадровый учет">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation name" name="name" type="text" placeholder="Иванов Василий">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label name">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation tel" id="tel-zakaz" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label tel">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label email">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<span class="input__underline"></span>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order popup (buh kons) -->
+
+
+
+<!-- Order popup (buh kons) -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="zakaz-form-kadr-uchet">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">КАДРОВЫЙ УЧЕТ</p>
+					</div>
+				</div>
+				<form id="zakaz_form__kadr-uchet" class="remodal__form form">
+					<input type="hidden" name="service" value="Кадровый учет">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation name" name="name" type="text" placeholder="Иванов Василий">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label name">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation tel" id="tel-zakaz" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label tel">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label email">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<span class="input__underline"></span>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order popup (buh kons) -->
+
+
+
+<!-- Order popup (nalog otch) -->
+
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="zakaz-form-nalog-otchet">
+		<div data-remodal-action="close" class="remodal-close">
+			<svg class="remodal-close__icon" width="20px" height="20px" viewBox="680.314 0 2267.721 2267.719">
+				<polygon points="2948.035,197.169 2750.865,0 1814.175,936.691 877.483,0 680.314,197.169 1617.006,1133.86 680.314,2070.551   877.483,2267.72 1814.175,1331.029 2750.865,2267.72 2948.035,2070.551 2011.344,1133.86 "/>
+			</svg>
+		</div>
+		<div class="remodal__content">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<h3 class="remodal__title">ЗАКАЗАТЬ УСЛУГУ</h3>
+					</div>
+					<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+						<p class="remodal__subtitle">НАЛОГОВАЯ ОТЧЕТНОСТЬ</p>
+					</div>
+				</div>
+				<form id="zakaz_form__nalog-otchet" class="remodal__form form">
+					<input type="hidden" name="service" value="Налоговая отчетность">
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation name" name="name" type="text" placeholder="Иванов Василий">
+								<label class="form__form-label" for="name">ВВЕДИТЕ ВАШЕ ИМЯ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label name">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-4 col--xl-4">
+							<div class="fieldset">
+								<input class="form__form-input input__validation tel" id="tel-zakaz" name="tel" type="text" placeholder="+ 375 (29) 000 00 00">
+								<label class="form__form-label" for="tel">ВВЕДИТЕ ВАШ ТЕЛЕФОН</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label tel">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-12 col--sm-12 col--md-4 col--lg-3 col--xl-3">
+							<div class="fieldset">
+								<input class="form__form-input input__validation email" name="email" type="email" placeholder="contact@mail.com">
+								<label class="form__form-label" for="email">ВВЕДИТЕ ВАШУ ПОЧТУ</label>
+								<span class="input__underline"></span>
+								<p class="form__error-label email">Неправильно заполнено поле</p>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+						<div class="col col--xs-12 col--sm-12 col--md-10 col--lg-10 col--xl-10">
+							<div class="fieldset fluid">
+								<textarea class="form__form-textarea" name="msg" placeholder="Введите ваше сообщение"></textarea>
+								<label class="form__form-label" for="message">ВВЕДИТЕ СВОЕ СООБЩЕНИЕ</label>
+								<span class="input__underline"></span>
+							</div>
+						</div>
+						<div class="col col--xs-0 col--sm-0 col--md-0 col--lg-1 col--xl-1"></div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<button class="form__btn btn-js">ОТПРАВИТЬ<span></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col--xs-12 col--sm-12 col--md-12 col--lg-12 col--xl-12">
+							<a href="#" class="remodal__privacy-policy" data-remodal-target="privacy-policy">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order popup (nalog otch) -->
 
 
 

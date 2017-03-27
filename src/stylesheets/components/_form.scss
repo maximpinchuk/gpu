@@ -55,6 +55,7 @@
 		display: none;
 		position: absolute;
 		bottom: -20px;
+		left: 18px;
 		font-family: 'ElliotRegular', sans-serif;
 		font-size: 0.75rem;
 		color: $text-third-color;
@@ -150,7 +151,7 @@
 }
 
 input:focus + label {
-	color: $text-third-color !important;
+	color: $accent-color !important;
 }
 // input.error + label {
 // 	color: $error !important;

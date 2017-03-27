@@ -307,8 +307,218 @@ $('#quastion_form').submit(function(e) {
 
 
 
-// Zakaz Form
-$('#zakaz_form').submit(function(e) {
+// Zakaz Form (ur lico)
+$('#zakaz_form__ur-lico').submit(function(e) {
+	e.preventDefault();
+
+	var nameField = $(this).find('.form__form-input.name');
+	var telField = $(this).find('.form__form-input.tel');
+	var emailField = $(this).find('.form__form-input.email');
+
+	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+		$.ajax({
+			type: 'POST',
+			url: '../php/form_zakaz.php',
+			data: $(this).serialize()
+		}).done(function() {
+			bonusPopUp.close();
+			successPopUp.open();
+			successPopUpText('Мы свяжемся с вами в ближайшее время');
+			$('#free-consultation_form').trigger('reset');
+			if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+				nameField.removeClass('valid');
+				telField.removeClass('valid');
+				emailField.removeClass('valid');
+			};
+		}).fail(function() {
+			errorPopUp.open();
+			errorPopUpText('Что то пошло не по плану');
+		});
+	} else {
+		// nameField.addClass('error') && telField.addClass('error') && emailField.addClass('error');
+		if (nameField.val() == '') {
+			$('.form__error-label.name').fadeIn(200);
+		} else if (telField.val() == '') {
+			$('.form__error-label.tel').fadeIn(200);
+		} else if (emailField.val() == '') {
+			$('.form__error-label.email').fadeIn(200);
+		}
+		return false;
+	}
+});
+
+
+
+// Zakaz Form (ur lico)
+$('#zakaz_form__vosst-uchet').submit(function(e) {
+	e.preventDefault();
+
+	var nameField = $(this).find('.form__form-input.name');
+	var telField = $(this).find('.form__form-input.tel');
+	var emailField = $(this).find('.form__form-input.email');
+
+	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+		$.ajax({
+			type: 'POST',
+			url: '../php/form_zakaz.php',
+			data: $(this).serialize()
+		}).done(function() {
+			bonusPopUp.close();
+			successPopUp.open();
+			successPopUpText('Мы свяжемся с вами в ближайшее время');
+			$('#free-consultation_form').trigger('reset');
+			if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+				nameField.removeClass('valid');
+				telField.removeClass('valid');
+				emailField.removeClass('valid');
+			};
+		}).fail(function() {
+			errorPopUp.open();
+			errorPopUpText('Что то пошло не по плану');
+		});
+	} else {
+		// nameField.addClass('error') && telField.addClass('error') && emailField.addClass('error');
+		if (nameField.val() == '') {
+			$('.form__error-label.name').fadeIn(200);
+		} else if (telField.val() == '') {
+			$('.form__error-label.tel').fadeIn(200);
+		} else if (emailField.val() == '') {
+			$('.form__error-label.email').fadeIn(200);
+		}
+		return false;
+	}
+});
+
+
+
+// Zakaz Form (likv pred)
+$('#zakaz_form__likv-pred').submit(function(e) {
+	e.preventDefault();
+
+	var nameField = $(this).find('.form__form-input.name');
+	var telField = $(this).find('.form__form-input.tel');
+	var emailField = $(this).find('.form__form-input.email');
+
+	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+		$.ajax({
+			type: 'POST',
+			url: '../php/form_zakaz.php',
+			data: $(this).serialize()
+		}).done(function() {
+			bonusPopUp.close();
+			successPopUp.open();
+			successPopUpText('Мы свяжемся с вами в ближайшее время');
+			$('#free-consultation_form').trigger('reset');
+			if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+				nameField.removeClass('valid');
+				telField.removeClass('valid');
+				emailField.removeClass('valid');
+			};
+		}).fail(function() {
+			errorPopUp.open();
+			errorPopUpText('Что то пошло не по плану');
+		});
+	} else {
+		// nameField.addClass('error') && telField.addClass('error') && emailField.addClass('error');
+		if (nameField.val() == '') {
+			$('.form__error-label.name').fadeIn(200);
+		} else if (telField.val() == '') {
+			$('.form__error-label.tel').fadeIn(200);
+		} else if (emailField.val() == '') {
+			$('.form__error-label.email').fadeIn(200);
+		}
+		return false;
+	}
+});
+
+
+
+// Zakaz Form (buh kons)
+$('#zakaz_form__buh-kons').submit(function(e) {
+	e.preventDefault();
+
+	var nameField = $(this).find('.form__form-input.name');
+	var telField = $(this).find('.form__form-input.tel');
+	var emailField = $(this).find('.form__form-input.email');
+
+	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+		$.ajax({
+			type: 'POST',
+			url: '../php/form_zakaz.php',
+			data: $(this).serialize()
+		}).done(function() {
+			bonusPopUp.close();
+			successPopUp.open();
+			successPopUpText('Мы свяжемся с вами в ближайшее время');
+			$('#free-consultation_form').trigger('reset');
+			if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+				nameField.removeClass('valid');
+				telField.removeClass('valid');
+				emailField.removeClass('valid');
+			};
+		}).fail(function() {
+			errorPopUp.open();
+			errorPopUpText('Что то пошло не по плану');
+		});
+	} else {
+		// nameField.addClass('error') && telField.addClass('error') && emailField.addClass('error');
+		if (nameField.val() == '') {
+			$('.form__error-label.name').fadeIn(200);
+		} else if (telField.val() == '') {
+			$('.form__error-label.tel').fadeIn(200);
+		} else if (emailField.val() == '') {
+			$('.form__error-label.email').fadeIn(200);
+		}
+		return false;
+	}
+});
+
+
+
+// Zakaz Form (kadr uchet)
+$('#zakaz_form__kadr-uchet').submit(function(e) {
+	e.preventDefault();
+
+	var nameField = $(this).find('.form__form-input.name');
+	var telField = $(this).find('.form__form-input.tel');
+	var emailField = $(this).find('.form__form-input.email');
+
+	if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+		$.ajax({
+			type: 'POST',
+			url: '../php/form_zakaz.php',
+			data: $(this).serialize()
+		}).done(function() {
+			bonusPopUp.close();
+			successPopUp.open();
+			successPopUpText('Мы свяжемся с вами в ближайшее время');
+			$('#free-consultation_form').trigger('reset');
+			if (nameField.hasClass('valid') && telField.hasClass('valid') && emailField.hasClass('valid')) {
+				nameField.removeClass('valid');
+				telField.removeClass('valid');
+				emailField.removeClass('valid');
+			};
+		}).fail(function() {
+			errorPopUp.open();
+			errorPopUpText('Что то пошло не по плану');
+		});
+	} else {
+		// nameField.addClass('error') && telField.addClass('error') && emailField.addClass('error');
+		if (nameField.val() == '') {
+			$('.form__error-label.name').fadeIn(200);
+		} else if (telField.val() == '') {
+			$('.form__error-label.tel').fadeIn(200);
+		} else if (emailField.val() == '') {
+			$('.form__error-label.email').fadeIn(200);
+		}
+		return false;
+	}
+});
+
+
+
+// Zakaz Form (kadr uchet)
+$('#zakaz_form__nalog-otchet').submit(function(e) {
 	e.preventDefault();
 
 	var nameField = $(this).find('.form__form-input.name');

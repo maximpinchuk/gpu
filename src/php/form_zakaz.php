@@ -7,6 +7,7 @@ $headers = "Content-type: text/html; charset=\"utf-8\"\n From: $recepient";
 $name = trim($_POST["name"]);
 $phone = trim($_POST["tel"]);
 $email = trim($_POST["email"]);
+$service = trim($_POST["service"]);
 $msg = trim($_POST["msg"]);
 $body = "
 	<html>
@@ -19,11 +20,13 @@ $body = "
 			</br>
 			<p><b>Email:</b> $email</p>
 			</br>
+			<p><b>Услуга:</b> $service</p>
+			</br>
 			<p><b>Сообщение</b> $msg</p>
 		</body> 
 	</html>
 ";
 
-$pagetitle = "Заказ услуги Регистрация юридических лиц \"$sitename\"";
+$pagetitle = "Заказ услуги \"$sitename\"";
 mail($recepient, $pagetitle, $body, $headers);
 ?>

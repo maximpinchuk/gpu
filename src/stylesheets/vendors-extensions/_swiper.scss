@@ -228,7 +228,6 @@
                 opacity: 1;
                 text-align: center;
                 cursor: pointer;
-                letter-spacing: 1px;
 
                 @include respond-to(large) {
                     width: 262px;

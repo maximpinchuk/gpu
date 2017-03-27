@@ -10,20 +10,28 @@
 
 	&__item {
 		padding: 11px 15px 11px 0;
-		font-family: 'ElliotBold', sans-serif;
-		font-family: 1.5rem;
+		font-family: 'ElliotRegular', sans-serif;
+		font-size: 1.3125rem;
 		color: $accent-color;
+
+		@include respond-to(extrasmall) {
+			font-size: 1.125rem;
+			line-height: 1.33;
+		}
 
 		&__link {
 			position: relative;
 			padding: 0 25px 0 0;
-			font-family: 'ElliotRegular', sans-serif;
-			font-family: 1.3125rem;
 			color: $text-primary-color;
+
+			@include respond-to(extrasmall) {
+				font-size: 1.125rem;
+				line-height: 1.33;
+			}
 
 			&:hover {
 				.arrow {
-					right: -8px;
+					right: -14px;
 
 					.st1 {
 						transform: scale(1);
@@ -39,6 +47,12 @@
 				width: 22px;
 				fill: $accent-color;
 				transition: right 0.3s;
+
+				@include respond-to(extrasmall) {
+					position: relative;
+					top: 0;
+					bottom: 0;
+				}
 
 				.st1 {
 					width: 14px;

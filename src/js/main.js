@@ -113,7 +113,7 @@ $(document).ready(function() {
 			}
 		},
 		paginationBulletRender: function (swiper, index, className) {
-			var tabsName = ['Компонент-Телеком', 'Бабушкина и К', 'Дакан Сервис', 'Спэйсд Диджитал'];
+			var tabsName = ['Компонент-Телеком', 'Бабушкина и К', 'Дакан Сервис', 'ТиМ АРТ'];
 			if ( index === (tabsName.length - 1) ) {
 				return  '<span class="' +className + '">'
 						+ tabsName[index] + '</span>'
@@ -231,30 +231,9 @@ $(document).ready(function() {
 
 
 
-	// Buttons hover effect
-	$(function() {
-		if ($(document).width() > 992) {
-		  	$('.btn-js')
-		    .on('mouseenter', function(e) {
-					var parentOffset = $(this).offset(),
-		      		relX = e.pageX - parentOffset.left,
-		      		relY = e.pageY - parentOffset.top;
-					$(this).find('span').css({top:relY, left:relX})
-		    })
-		    .on('mouseout', function(e) {
-					var parentOffset = $(this).offset(),
-		      		relX = e.pageX - parentOffset.left,
-		      		relY = e.pageY - parentOffset.top;
-		    	$(this).find('span').css({top:relY, left:relX})
-		    });
-	    }
-	});
-
-
-
 	// Parallax init
 	$('.header').parallax({
-		speed: 0.02
+		speed: 0.8
 	});
 
 
