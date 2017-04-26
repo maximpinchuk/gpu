@@ -425,6 +425,7 @@
 
 // Guarantees block
 .guarantees {
+
 	&-block {
 		position: relative;
 		padding: 110px 0;
@@ -475,7 +476,7 @@
 
 	&-block__descr {
 		display: block;
-		max-width: 760px;
+		max-width: 830px;
 		margin: 0 auto;
 		padding: 3px 0 35px 0;
 		font-family: 'ElliotRegular', sans-serif;

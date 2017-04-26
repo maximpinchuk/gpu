@@ -36,48 +36,11 @@
 	letter-spacing: 1px;
 	border: 1px solid $border-color;
 	border-radius: 4px;
-	transition: color 0.3s, border 0.3s 0.1s;
-
-	span {
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		width: 0;
-		height: 100%;
-		background: $accent-color;
-		transition: width 0.4s;
-		z-index: -1;
-	}
+	transition: color 0.3s, background 0.3s;
 
 	&:hover {
 		color: $white;
 		border: 1px solid $accent-color;
-
-		@include respond-to(extrasmall) {
-			color: $text-color;
-			border: 1px solid $border-color;
-		}
-
-		@include respond-to(small) {
-			color: $text-color;
-			border: 1px solid $border-color;
-		}
-
-		span {
-			width: 100%;
-
-			@include respond-to(extrasmall) {
-				width: 0;
-				height: 0;
-			}
-
-			@include respond-to(small) {
-				width: 0;
-				height: 0;
-			}
-
-		}
-
+		background: $accent-color;
 	}
 }
