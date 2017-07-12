@@ -156,7 +156,9 @@ var calc = {
 
 // Событие калькулятора
 var btn = document.getElementById('calc__btn');
-btn.onclick = function(e) {
-	e.preventDefault();
-	calc.calc();
-};
+if (btn) {
+	btn.onclick = function(e) {
+		e.preventDefault();
+		calc.calc();
+	};
+}
